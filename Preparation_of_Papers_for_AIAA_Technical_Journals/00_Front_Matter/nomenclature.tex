@@ -1,0 +1,53 @@
+\section*{Nomenclature}
+
+\noindent All coefficients, ratios, normalized coordinates, and model gates
+are dimensionless unless units are stated.
+
+{\renewcommand\arraystretch{1.0}
+\noindent\begin{longtable*}{@{}l @{\quad=\quad} p{0.76\textwidth}@{}}
+\multicolumn{2}{@{}l}{\textit{Roman symbols}}\\
+$AR$                         & wing aspect ratio \\
+$b$                          & wingspan, m \\
+$c$                          & chord length, m \\
+$C_D$                        & drag coefficient \\
+$C_L$                        & lift coefficient \\
+$C_{M_z}$                    & moment coefficient about the $z$ axis \\
+$C_p$                        & pressure coefficient, $(p-p_\infty)/q_\infty$ \\
+$C_p^{\mathrm{sec}}$         & sectional pressure baseline supplied by the knowledge model \\
+$G(\eta,x)$                  & parameterized wing-surface geometry \\
+$g_r,\ g_t$                  & spatial gates for the root- and tip-region corrections \\
+$L_2$                        & Euclidean norm used to monitor iterative convergence \\
+$M_\infty$                   & freestream Mach number \\
+$N$                          & number of complete target-wing training samples \\
+$N_c,\ N_s,\ N_n$            & chordwise, spanwise, and wall-normal grid-point counts \\
+$N_x,\ N_\eta$               & numbers of chordwise and spanwise prediction points \\
+$p$                          & local static pressure, Pa \\
+$p_\infty$                   & freestream static pressure, Pa \\
+$q_\infty$                   & freestream dynamic pressure, Pa \\
+$Re_c$                       & Reynolds number based on chord length \\
+$R_\theta$                   & target-domain three-dimensional pressure residual \\
+$t/c$                        & thickness-to-chord ratio \\
+$x/c$                        & normalized chordwise coordinate \\
+$z$                          & spanwise coordinate, m \\
+\\[-0.2em]
+\multicolumn{2}{@{}l}{\textit{Greek symbols}}\\
+$\alpha$                     & angle of attack, deg \\
+$\Delta(\cdot)$              & difference relative to the stated reference solution \\
+$\Delta C_{p,r}$             & root-region pressure correction \\
+$\Delta C_{p,t}$             & tip-region pressure correction \\
+$\eta$                       & normalized semispan coordinate, $z/(b/2)$ \\
+$\lambda$                    & wing taper ratio \\
+$\Lambda_{c/4}$              & quarter-chord sweep angle, deg \\
+$\theta$                     & trainable model parameters \\
+\\[-0.2em]
+\multicolumn{2}{@{}l}{\textit{Subscripts and superscripts}}\\
+$c$                          & quantity based on the chord length \\
+$r$                          & root-region quantity \\
+$t$                          & tip-region quantity \\
+$\infty$                     & freestream quantity \\
+$\mathrm{3D}$                & three-dimensional target quantity \\
+$\mathrm{sec}$               & sectional-baseline quantity \\
+\end{longtable*}}
+
+% longtable increments the table counter even though nomenclature is unnumbered.
+\addtocounter{table}{-1}

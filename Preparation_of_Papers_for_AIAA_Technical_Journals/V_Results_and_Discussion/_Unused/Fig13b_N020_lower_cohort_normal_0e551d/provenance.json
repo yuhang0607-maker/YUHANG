@@ -1,0 +1,30 @@
+{
+  "figure": "Fig13b_N020_lower_cohort_normalized_root_local",
+  "split": "validation",
+  "validation_wings": 41,
+  "N_values": [
+    20
+  ],
+  "seeds": [
+    3407,
+    3408,
+    3409
+  ],
+  "reuse": "Exact image, source-data and caption copy; no re-render or recomputation",
+  "original_provenance": "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\11_PaperFigures\\chapter5_round2\\validation\\run_20261026_102826_215214\\figures\\Fig13b_N020_lower_cohort_normalized_root_local\\provenance.json",
+  "original_provenance_sha256": "eecae7e6a957bf4134ddc97fbb07ca8715a14b44027e056e0f9cc63c6a0dba84",
+  "copied_file_sha256": {
+    "Fig13b_N020_lower_cohort_normalized_root_local.png": "75556d6c36b12b4604781f64814f7c8dddc8493fa07a5069ba27d03dffcb39ef",
+    "Fig13b_N020_lower_cohort_normalized_root_local.pdf": "d8e06d5637096a7619b8d2584ef22807edf54f03eb1e5a87bde3837f6f7a6cff",
+    "Fig13b_N020_lower_cohort_normalized_root_local.svg": "b64133595c100231e36fc52fabf30d41a9be04d97dc0ec915f856b3761e5e02b",
+    "source_data.csv": "396e4b9ef1414fae3e4eb0dc2e2f9abda7502a4bd765e40514d43287d6ef8fa3",
+    "caption.txt": "cd742924dc4e455b1399f053f872f7b854798a7951cf7635f69fdcafe80676f8"
+  },
+  "size_inches": [
+    7.0,
+    2.55
+  ],
+  "caption": "All-wing lower root paired RMSE changes (eta<=0.20), N=20. Both comparisons use the same symmetric root scale. The configured root scale policy is independent; its actual limits and overflow counts are recorded. Blue is reduced RMSE, red increased RMSE. Values are identical to the full-span companion; only crop, scale and layout change. Root color limits may differ from full-span or other-surface limits; compare numerical colorbars, not color depth across pages.\n",
+  "statistical_unit": "See unchanged figure caption",
+  "test_evaluated": false
+}

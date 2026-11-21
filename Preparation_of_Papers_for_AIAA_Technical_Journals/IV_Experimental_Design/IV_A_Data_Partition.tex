@@ -1,0 +1,39 @@
+
+\subsection{Target-Domain Data Partition and Few-Shot Learning Protocol}
+\label{subsec:target-domain-protocol}
+
+The target-domain database initially comprises 500 three-dimensional wing configurations with varying planforms. The initial training, validation, and test partitions contain 350, 50, and 100 configurations, respectively. Following mesh-validity and convergence screening, 437 configurations are retained, including 308 training candidates, 41 validation wings, and 88 test wings. The original assignments are preserved, and the three partitions are disjoint at the wing-configuration level. The validation set is used for model selection, whereas the test set provides a common basis for evaluating the selected models.
+
+For surface-pressure prediction, seven target-domain training budgets are considered, $N\in\{10,20,30,40,50,80,100\}$. At each budget, the corresponding number of wings is selected from the 308 training candidates. A stratified, centroid-initialized maximin sampling strategy is employed based on flow conditions, planform parameters, and principal-component representations of airfoil geometry to improve the coverage of the design space. The principal training subsets are nested across budgets, such that smaller subsets are contained within larger ones. M0, M1, and M2 use matched wing selections at each budget to ensure a consistent comparison. Three independent training runs are conducted for each configuration to characterize run-to-run variability. In addition, the influence of training-set composition is examined separately at $N=20$ and $N=50$ using five alternative wing subsets, with the training random seed held fixed. Pressure-model checkpoints are selected based on their performance on the 41 validation wings. The common 88-wing test partition is excluded from training and checkpoint selection in the reported experiments and is used only to evaluate the frozen pressure models.
+
+The aerodynamic-coefficient study uses the same seven budgets but follows a separate force-label protocol. At each budget, three independently sampled, nested training-subset sequences are constructed. Within each sequence, the direct regression model D0, the regression model D1 using M2-predicted pressure, and the regression model D2 using CFD-reference pressure are trained on matched wings. Separate regressors are fitted for the lift coefficient $C_L$, drag coefficient $C_D$, and pitching-moment coefficient $C_{M_z}$. The M2 pressure model used in D1 remains fixed; consequently, $N$ counts only the force-labeled target wings used for downstream regression, not the pressure data used to establish M2. All coefficient models are evaluated on the same 88 test wings. Error metrics are computed separately for each trained model before aggregation across the three training subsets, so repeated predictions of a test wing are not treated as additional independent test configurations.
+
+The hierarchical aerodynamic knowledge models are trained according to their respective data dependencies. The sectional baseline pressure model is trained using the infinite-span swept-wing database, while the root- and tip-region correction models are trained separately using paired finite-span and infinite-span CFD data. These source-domain knowledge models remain frozen during subsequent target-domain training. The target-domain pressure models M0, M1, and M2, as well as the aerodynamic-coefficient regression models D0, D1, and D2, are trained using their corresponding target-domain training samples. All models employ the AdamW optimizer with an initial learning rate of $1\times10^{-3}$. The specific training configurations are summarized in Table~\ref{tab:training-configurations}.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Training configurations of the aerodynamic models}
+    \label{tab:training-configurations}
+    \small
+    \setlength{\tabcolsep}{5pt}
+    \renewcommand{\arraystretch}{1.15}
+    \begin{tabular}{@{}lcccc@{}}
+        \hline
+        Model & Initial LR & Weight decay & Batch size & Epochs \\
+        \hline
+        Sectional baseline
+        & $1\times10^{-3}$ & $1\times10^{-4}$ & 128 & 2000 \\
+
+        Root/tip correction
+        & $1\times10^{-3}$ & $1.5\times10^{-4}$ & 64 & 900 \\
+
+        Target pressure (M0/M1/M2)
+        & $1\times10^{-3}$ & $3\times10^{-4}$ & 2 & 600 \\
+
+        Coefficient regression (D0/D1/D2)
+        & $1\times10^{-3}$ & $1\times10^{-3}$ & 16 & 600 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+For target-domain pressure models incorporating regional corrections, the gating parameters and correction amplitudes are initialized using the corresponding target-domain training samples and held fixed during the first 50 epochs. They are subsequently optimized jointly with the residual network, using an initial learning rate one-tenth that of the residual backbone. All source-domain knowledge models remain frozen throughout target-domain training. The root- and tip-region correction models and target-domain pressure models use validation-selected checkpoints, whereas the sectional baseline model uses its final trained parameters and the coefficient regressors use their final checkpoints determined by the training-error-based stopping criterion. The M2 pressure model used for aerodynamic-coefficient prediction is trained using 20 high-fidelity target-domain pressure samples and remains fixed across all downstream regression experiments.

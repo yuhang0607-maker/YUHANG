@@ -1,0 +1,7 @@
+
+\subsection{Pressure-Conditioned Aerodynamic Coefficient Prediction}
+\label{subsec:force-coefficient-prediction}
+
+The transfer of surface-pressure information to integrated aerodynamic prediction is investigated using separate single-output regressors for the lift coefficient $C_L$, drag coefficient $C_D$, and pitching-moment coefficient $C_{M_z}$. Each regressor maps geometric and flow-condition descriptors, together with a surface-pressure representation when available, to the corresponding CFD coefficient. The coefficients are learned directly from the force and moment labels rather than obtained by integrating the predicted pressure distribution.
+
+Three input configurations are considered to distinguish the contribution of pressure information from its prediction accuracy. D0 performs direct regression using geometry and flow conditions alone. D1 additionally incorporates the surface-pressure distribution predicted by the pretrained M2 model, whose parameters remain fixed throughout coefficient-regressor training. D2 uses the corresponding CFD-reference pressure in place of the M2 prediction, providing a diagnostic reference for the value of more accurate pressure information. The regressors are fitted independently for each coefficient; D1 and D2 differ in the source of their pressure inputs, whereas D0 does not require a pressure input. The data-partition and repeated-sampling protocols are specified in Sec.~\ref{subsec:target-domain-protocol}.

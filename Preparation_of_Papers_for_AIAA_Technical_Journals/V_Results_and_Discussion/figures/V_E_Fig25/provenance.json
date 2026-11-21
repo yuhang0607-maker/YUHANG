@@ -1,0 +1,27 @@
+{
+  "source": "processed_data/FigVE1_source_data.csv",
+  "dataset": "ExploratoryTest88",
+  "budgets": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    80,
+    100
+  ],
+  "methods": [
+    "D0",
+    "D1",
+    "D2"
+  ],
+  "subsets": [
+    "A",
+    "B",
+    "C"
+  ],
+  "n_wings": 88,
+  "center": "mean of per-subset MAE",
+  "spread": "sample SD ddof=1",
+  "source_manifest": "source_data/source_manifest.json"
+}

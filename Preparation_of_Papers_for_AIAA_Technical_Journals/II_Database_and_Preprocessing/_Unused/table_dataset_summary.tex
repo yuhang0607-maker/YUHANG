@@ -1,0 +1,21 @@
+\begin{table}[hbt!]
+  \caption{Composition and observed design ranges of the aerodynamic databases after file-level screening}
+  \label{tab:dataset-summary}
+  \centering
+  \scriptsize
+  \setlength{\tabcolsep}{2.5pt}
+  \renewcommand{\arraystretch}{1.12}
+  \begin{tabularx}{\textwidth}{@{}p{0.17\textwidth}p{0.17\textwidth}ccp{0.33\textwidth}@{}}
+    \hline\hline
+    Database & Usable cohort sizes & $M_\infty$ & $\alpha$, deg & Geometry and design domain \\
+    \hline
+    Infinite-span swept wing & General 3,000; shock-enhanced 2,000 (5,000/5,000) & 0.700--0.780 & 0.000--3.999 & Six baseline sections with CST perturbations; $\Lambda_{c/4}=25.000^\circ$--$34.997^\circ$; $t/c=0.060$--$0.160$ \\
+    10 m constant-chord wing & General 2,698; shock-enhanced 1,837 (4,535/5,000) & 0.700--0.780 & 0.000--3.999 & $c=1\ \mathrm{m}$, $b/2=10\ \mathrm{m}$; $\Lambda_{c/4}=25.001^\circ$--$34.997^\circ$; $t/c=0.060$--$0.160$ \\
+    Variable-planform finite wing & Planform 476 (476/500) & 0.700--0.780 & 0.008--3.995 & $AR=7.003$--$11.000$; $\lambda=0.200$--$0.400$; $\Lambda_{c/4}=25.001^\circ$--$34.983^\circ$; six local sections with $t/c=0.060$--$0.160$ \\
+    \hline\hline
+  \end{tabularx}
+  \begin{minipage}{0.98\textwidth}
+    \vspace{2pt}\scriptsize
+    Values in parentheses are usable/attempted CFD cases. Ranges are computed only from usable cases. CST denotes class--shape transformation.
+  \end{minipage}
+\end{table}

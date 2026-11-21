@@ -1,0 +1,2277 @@
+{
+  "figure": "Fig12_spanwise_absolute",
+  "split": "validation",
+  "validation_wings": 41,
+  "case_selection": {
+    "policy": "Existing examples reused; no new example selection"
+  },
+  "seeds": [
+    3407,
+    3408,
+    3409
+  ],
+  "seed_spread": "sample SD, ddof=1; not a prediction CI",
+  "caption": "Spanwise pressure errors on 41 fixed validation wings at N=10, 20, 100. RMSE is computed over valid chordwise nodes separately for each wing and native section, then averaged across 41 wings, then summarized across three matched training seeds. Lines and shading are the seed mean and sample SD (ddof=1), not confidence intervals. Paired changes are M1-M0 and M2-M1 within the same seed; negative values indicate improvement. Eta labels are the mean saved coordinates of aligned native stations; no sections are interpolated or added. Panel vertical scales adapt to the observed range. These are wing-sectional statistics, not cross-wing nodewise RMSE.",
+  "notes": {
+    "aggregation": "Chordwise RMSE per wing/section -> mean over 41 wings -> mean/SD over seeds",
+    "N_values": [
+      10,
+      20,
+      100
+    ],
+    "seeds": [
+      3407,
+      3408,
+      3409
+    ],
+    "difference_keys": {
+      "M1": "M1-M0",
+      "M2": "M2-M1"
+    },
+    "mask": "LE0 and eta>=0.9975 excluded",
+    "layout_audit": {
+      "min_text_pt": 8.0,
+      "text_outside_canvas": [],
+      "canvas_inches": [
+        7.0,
+        4.6
+      ]
+    }
+  },
+  "size_inches": [
+    7.0,
+    4.6
+  ],
+  "sources": {
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\splits\\validation_ids.txt": {
+      "sha256": "c9cd42561af73230ed85e7932a9692bdb17f30a11723b03b130cfe05dcb1fd9b",
+      "bytes": 533
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\training_arrays\\sample_ids.npy": {
+      "sha256": "987352278a4937536bc59dae28515d7799778627f664657e1475daa56fdd4a23",
+      "bytes": 19356
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\splits\\test_ids.txt": {
+      "sha256": "189a3dbed59ef943c26db13196e39540b9a8d077ce5c813204ccf045806fe6a9",
+      "bytes": 1144
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\training_arrays\\conditions.npy": {
+      "sha256": "e9b434688ad8cdf33aa11e586d6969f97137e491fc751c795fcf132e660e45fa",
+      "bytes": 5372
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\training_arrays\\planform.npy": {
+      "sha256": "1145ab7fc98163058764fa7981ce8019add6e071032e989567f4dd278f319ba0",
+      "bytes": 7120
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\PaperWriting\\Chapter5_NewBudget_Audit_20261027\\Chapter5_Cp_Results_N010_to_N100.csv": {
+      "sha256": "260972897e3936d4faa44d2e3f66df307f05651217ae50ee93a518c1af776b43",
+      "bytes": 39680
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\PaperWriting\\Chapter5_NewBudget_Audit_20261027\\Chapter5_Aerodynamic_Coefficient_Results.csv": {
+      "sha256": "1448e27aa5423c19b6b688fc1da49bf42814b08e699e1e9b375167e2cc38392d",
+      "bytes": 116704
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\PaperWriting\\Chapter5_NewBudget_Audit_20261027\\Chapter5_Regional_Cp_Results.csv": {
+      "sha256": "2b19144daa0d98eb0a026174ee1c6148abf1252758b4b76a536dec5ceee18e07",
+      "bytes": 157444
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3407\\run_config.json": {
+      "sha256": "bd45976cf4b2e89af265f4a09a41146a8c5967f9fd72d8f31e6f51d00e377416",
+      "bytes": 13126
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "30d5c894630f6379c242cf0722163790d35002dbc770a94ee699f421e4f6ed71",
+      "bytes": 3621190
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "b8dd22bcee678bcbbab13be0b3dbd8abf1e95d23e745cdaac46bbae0eadc5a14",
+      "bytes": 6568
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3407\\best_model.pt": {
+      "sha256": "1a2c1f0ba607b79fab9e4865b045691580d6b1ff566ab5ecb30b91e6f138d1fb",
+      "bytes": 7488028
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3407\\scalers.json": {
+      "sha256": "4823d24a180ed499ea4d4029ef69f086f50178defe582f02856473bfbfcdc8d2",
+      "bytes": 2851
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\training_arrays\\valid_mask_upper.npy": {
+      "sha256": "46e7f6c4cd178d8c4a036dce0f9ca7d4d6f2fe2e675445bef9bab4e4e942ee7e",
+      "bytes": 7872
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\training_arrays\\valid_mask_lower.npy": {
+      "sha256": "c93773b209475d3eb73845cbca9dcc3fe2e2a9716ce2b09f883f6bde8d17f7eb",
+      "bytes": 4484
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3407\\training_complete.json": {
+      "sha256": "caeb63c491269610d3034f8ef7be9d508e59d80464df9204a0a3160020e2f076",
+      "bytes": 763
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\splits\\train_rep00_N010.txt": {
+      "sha256": "90d67967bb7a52cebdf541438285e7688948da66fe320bc02e7bfc3c1b68359a",
+      "bytes": 130
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3408\\run_config.json": {
+      "sha256": "b066245bc963b9f2ff73d4e2fc80f4777c72695fa8b5b1f89e2896edfc168265",
+      "bytes": 13126
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "a8c72e5852c6e19f2a312716f53539ee3a1150148edb7fa6947f64237da43a57",
+      "bytes": 3621475
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "8a1a01ea004acc33cb7a3081a74c9f9528c9af799de07aff2d78aafe8bc4ae2f",
+      "bytes": 6565
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3408\\best_model.pt": {
+      "sha256": "252453dbc838c539517d73b4ab0a3220f5323ea25a86f5673e1648a0bc355445",
+      "bytes": 7488924
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3408\\scalers.json": {
+      "sha256": "4823d24a180ed499ea4d4029ef69f086f50178defe582f02856473bfbfcdc8d2",
+      "bytes": 2851
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3408\\training_complete.json": {
+      "sha256": "99f44e851eee87ac3c00f84e10820a0d927b07747b9417b67c4fc8f56d6df548",
+      "bytes": 759
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3409\\run_config.json": {
+      "sha256": "c917c0e578e3b14edea52757817a057c416d2c7c70686ae3fa155c6dd640eb98",
+      "bytes": 13126
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "2b5a257a6d806a63a7b4560711234f5807c0120106fc7b057f46538c7b78807b",
+      "bytes": 3621646
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "75017ac3f1b6b65bff8695a22473815e505253478b41725e81f31ec123777dd1",
+      "bytes": 6568
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3409\\best_model.pt": {
+      "sha256": "7e9579355ade4b39f54b0108ab42e587e95dd7bce6a4111dd570d844c4ee0727",
+      "bytes": 7489692
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3409\\scalers.json": {
+      "sha256": "4823d24a180ed499ea4d4029ef69f086f50178defe582f02856473bfbfcdc8d2",
+      "bytes": 2851
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N010_R00_S3409\\training_complete.json": {
+      "sha256": "7d7eb9ca97cadf51eb2366ac882a05fd4b930a5db0a7aab25b5403bca120a1ac",
+      "bytes": 763
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3407\\run_config.json": {
+      "sha256": "4d277fd64829ab1efed5515ce4f426c33140afabdf780cf829ed8d58d9dd2397",
+      "bytes": 13126
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "fedf00e5f568255ed52d2e7243bf09515193d861e5779a73421d31e98d4158dd",
+      "bytes": 3618374
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "aa41073a8b816190dc97998deb020e3f088cfdb08d4b9943ffbbb6276ee5eaf1",
+      "bytes": 6569
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3407\\best_model.pt": {
+      "sha256": "7d25f5df37a56f796e75f462fc7eadf0c0287d403a2bf779e965c4b02326d9b0",
+      "bytes": 7495196
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3407\\scalers.json": {
+      "sha256": "59fbeb773d0c33cae1de077a725a81e17267dcf5f8d1d6fcbbc8ffc0a7e84bbf",
+      "bytes": 2966
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3407\\training_complete.json": {
+      "sha256": "6f5068a357fe5bd49e0153f3debf836378d31d2f1400826b057d3cc7f8cc0296",
+      "bytes": 764
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3408\\run_config.json": {
+      "sha256": "9166c0c39f76bcaffb8a4355c88f122894b77bea5551a46fd079bf37f597bdae",
+      "bytes": 13126
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "d379edc99f9795b5fb334c4c64c3a5b74275edf73d38f82eb598a5b5c6a05b9a",
+      "bytes": 3618479
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "a6138f64499c6064723f1ff84474bc31cdab3ca557ba103ea55c22776b60da11",
+      "bytes": 6572
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3408\\best_model.pt": {
+      "sha256": "c54a2dc6362646cc735dc687046c869e8543a49d328788ced967e640359fee3c",
+      "bytes": 7496668
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3408\\scalers.json": {
+      "sha256": "59fbeb773d0c33cae1de077a725a81e17267dcf5f8d1d6fcbbc8ffc0a7e84bbf",
+      "bytes": 2966
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3408\\training_complete.json": {
+      "sha256": "1826706551d5777100ad6638bdf97e7054cc62e97b2d27dd5c73e99b46027fa0",
+      "bytes": 768
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3409\\run_config.json": {
+      "sha256": "d41ee01ec86454b51057d7530a970e5986622d3572e3b2484f74e29a22a9cbc6",
+      "bytes": 13126
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "ccd5b2d9f336f3aa262a83594620c42517805f43eb9560f308ae3947efde930b",
+      "bytes": 3618680
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "319e8e3c4816484090747207231bb9444c549c632384b3c7f2006f3af3e737f3",
+      "bytes": 6570
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3409\\best_model.pt": {
+      "sha256": "8bfdba7a768b0ac0d44f25b2c2fa8b239349863b5182ed23996b17266e97ebce",
+      "bytes": 7490716
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3409\\scalers.json": {
+      "sha256": "59fbeb773d0c33cae1de077a725a81e17267dcf5f8d1d6fcbbc8ffc0a7e84bbf",
+      "bytes": 2966
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N010_R00_S3409\\training_complete.json": {
+      "sha256": "08167c8f53ed83f4e8115add50ea72aca7285ebcb1c1cc44d706d8d5d95056a6",
+      "bytes": 767
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3407\\run_config.json": {
+      "sha256": "8e80e7c8036b1076157f8ae30c4fa5c4414a54d3423dba4e86b1f9824ea9ea7c",
+      "bytes": 13126
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "8d333fb431666998ce29f8e3877e6cb44cf13a1489121c5947e2adee35cc043a",
+      "bytes": 3620545
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "804fd48e0d2af3e1ef60bacae2f1cfe1a537c1e146f359317c6369d4f880cfba",
+      "bytes": 6570
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3407\\best_model.pt": {
+      "sha256": "c60f30fab08080eeb664695dbc89481ff6720431be90c1bd2a53faf21bf8567e",
+      "bytes": 7487772
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3407\\scalers.json": {
+      "sha256": "9c89194367829f35e09310a4a0dca6ab3fa5974ab34f6e64972d44e893c40303",
+      "bytes": 3156
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3407\\training_complete.json": {
+      "sha256": "7ddfc57974b619b693d3fa841ea8fdf098ac9fc0c49edd07be0b6007702bd420",
+      "bytes": 765
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3408\\run_config.json": {
+      "sha256": "28b5b9348e3212ef266b9ea6cf1ce7b255910ea17a6f0f64dcfad869cf9b9540",
+      "bytes": 13126
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "83ba3c2d2f664dca975571cdfef2eb489f8f808cac72840eaa09974d494507ed",
+      "bytes": 3619905
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "7dee0ee1dc0f7d2417dbc2554c0a859143df2fbcf91da9204abf21380a1118a8",
+      "bytes": 6571
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3408\\best_model.pt": {
+      "sha256": "11f3ed13aabe9831b68d4ac88ad65455f23d65d970ef114fa0533095fbce952d",
+      "bytes": 7493394
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3408\\scalers.json": {
+      "sha256": "9c89194367829f35e09310a4a0dca6ab3fa5974ab34f6e64972d44e893c40303",
+      "bytes": 3156
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3408\\training_complete.json": {
+      "sha256": "cc09e03f917329f09f48a964e57dfa7a6bb481aa670076f86d6c4c7d95809731",
+      "bytes": 766
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3409\\run_config.json": {
+      "sha256": "b9320e2da0b3ab07ced011983db103f5c498303a98a6bf177a5f4b6792f4b686",
+      "bytes": 13126
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "1a3b14bd11f9e2b9b1cf0590bf39b4c32b69d012d5db8d07363e80de902c0c0f",
+      "bytes": 3619898
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "08ac54f1e3c8d603e13dab311759aced97b4e243ef064d66cd13734b1689edf6",
+      "bytes": 6571
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3409\\best_model.pt": {
+      "sha256": "507faf126a9d5ca945b3545fdb9a409f75738f988ae098dfb28108bd17d49096",
+      "bytes": 7491154
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3409\\scalers.json": {
+      "sha256": "9c89194367829f35e09310a4a0dca6ab3fa5974ab34f6e64972d44e893c40303",
+      "bytes": 3156
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N010_R00_S3409\\training_complete.json": {
+      "sha256": "06d7a948ef1b6465b36b06d9b6b9a08f7a5b6d5f101e4fc0268559273ac52ee4",
+      "bytes": 765
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3407\\run_config.json": {
+      "sha256": "83ede471a7689fa67d423624dbb719177c917be3c40ec0bcbc85ba246bd5b764",
+      "bytes": 9406
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "b23da1ca5dacbcd8f7501824dac4b265effbc89e3ea3852b0e774ee9715ab08c",
+      "bytes": 3620539
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "89301077f7515f6b44478c59cd76f4306513bfb928b24165b6c209c737020ec1",
+      "bytes": 2826
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3407\\best_model.pt": {
+      "sha256": "5f9eec29f36abc72abfb732cedf0bcb408e44a7d088fa285e7f1c0c237ea2b3f",
+      "bytes": 7488860
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3407\\scalers.json": {
+      "sha256": "cdd1dda814b69e6c19b456711e6341a4e79f9f18237f67560dc82344f1dd51c7",
+      "bytes": 3389
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3407\\training_complete.json": {
+      "sha256": "3757e491bfcc232b00fd37bcb7c363289d1f77256364c5d77d4d14df9a13f019",
+      "bytes": 765
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\splits\\train_rep00_N020.txt": {
+      "sha256": "f05699b22372a04e30275202e214d9f119ae6c5b36ef43fe066b9a1a8e04c3a1",
+      "bytes": 260
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3408\\run_config.json": {
+      "sha256": "5bb66e46f686891ef7e38fbab1b2390f63597a5559f6b2ae2a5e5daa656dd9bd",
+      "bytes": 9406
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "dac15fa06911cd5d806bf61571978420d140801d19bf090fed83ebbe6b402c33",
+      "bytes": 3620965
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "75df2e30362ed5c1917483e3aedfeb545fbdb28ea88ca78a1abd5308aee17ad6",
+      "bytes": 2823
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3408\\best_model.pt": {
+      "sha256": "48c2c5fbc1361852c6e21d1d9a5520a7c999950e6efa42e7f0664f51ed42f014",
+      "bytes": 7487004
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3408\\scalers.json": {
+      "sha256": "cdd1dda814b69e6c19b456711e6341a4e79f9f18237f67560dc82344f1dd51c7",
+      "bytes": 3389
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3408\\training_complete.json": {
+      "sha256": "37a24de92885a93a05b3a7745016d98f72d8c462e777b6f3175922b39f4819f8",
+      "bytes": 763
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3409\\run_config.json": {
+      "sha256": "beb4b77b7050e0b166fa6a89d2ecb4f9aa49a7b41170382136b6b949ceb17de8",
+      "bytes": 9406
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "31234e85280521ffc2e007d0ac76015ac009bc1e69b28fc39002972e0b5a5953",
+      "bytes": 3619006
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "a9ff2a90213dc9b26ef5498637a0a61473c2159bfa42ee0da867be82f4153500",
+      "bytes": 2824
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3409\\best_model.pt": {
+      "sha256": "19b58d10fdbefa6963cf71c1fb5ecac1f8cc12bc6e8e3744573e1a2f8381307c",
+      "bytes": 7486748
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3409\\scalers.json": {
+      "sha256": "cdd1dda814b69e6c19b456711e6341a4e79f9f18237f67560dc82344f1dd51c7",
+      "bytes": 3389
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N020_R00_S3409\\training_complete.json": {
+      "sha256": "b802658a19406f9a84d550fe402830bcc111331b70e83b9a65cb09fb3fc1411e",
+      "bytes": 763
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3407\\run_config.json": {
+      "sha256": "fb95d474efd0741f211b5991eb7f83e4eca52c695d5b6acdc76b6aaf76a5db57",
+      "bytes": 9406
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "10cd42777eb1faddc438b7fd5899383bb044fddfbbd291a23e2d9ea1d39378f8",
+      "bytes": 3618652
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "332556f00ea2a0128b608a125bb508ec81c201538f6a4e1c331b16842e7bd9e5",
+      "bytes": 2827
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3407\\best_model.pt": {
+      "sha256": "206888b3a348db99d3f5e1ffd3e02d3dff1764ca2c231d34a7c06acf6025f309",
+      "bytes": 7488348
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3407\\scalers.json": {
+      "sha256": "c58a590695bceb91636291880775a81f0f7a00156cf4b8ee2d289d5c6cf496b5",
+      "bytes": 3507
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3407\\training_complete.json": {
+      "sha256": "46b704f3cde312d46f3b87a46575fb1889d2fa71dcdbf3f208d11edda59f0ca1",
+      "bytes": 765
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3408\\run_config.json": {
+      "sha256": "28538f1f928c5cd2b3f29c0b77f92820f3a0e042ce106b9383de716bcf068a72",
+      "bytes": 9406
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "d5e32844c7c0587ecccdff795d36f557f0439b995efcef22cd9b1d00d4adbfa9",
+      "bytes": 3618535
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "b1d18de1852e2daade023b3c821be2faf82172f70bfbafa3e9cafd77f2a0a90d",
+      "bytes": 2825
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3408\\best_model.pt": {
+      "sha256": "7b2b0b3438e0c17685629e208a7a3f93628d2e8a2d0162eb5c0c21083cef022e",
+      "bytes": 7486876
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3408\\scalers.json": {
+      "sha256": "c58a590695bceb91636291880775a81f0f7a00156cf4b8ee2d289d5c6cf496b5",
+      "bytes": 3507
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3408\\training_complete.json": {
+      "sha256": "73009aebd0b89179d6eefd4e56afb6152d3dac0da6b82778c353c4709514291c",
+      "bytes": 765
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3409\\run_config.json": {
+      "sha256": "8942112d22ef8d1d4e4fac174f9373d546ad60c5275e29aeca43ee868edd8e9d",
+      "bytes": 9406
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "df5465b5f471fbf32ccb90564cd514f4144f0f1c1fdf12bf3e846fd40851281a",
+      "bytes": 3618828
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "4fc9df98bbcc42990ca672c98980cc0fd11673886da5fcde016364befcd2906a",
+      "bytes": 2826
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3409\\best_model.pt": {
+      "sha256": "35fa27e6f0f9c626e0c01b195f535f27c6af627c66904b6ceddd51095f648049",
+      "bytes": 7486492
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3409\\scalers.json": {
+      "sha256": "c58a590695bceb91636291880775a81f0f7a00156cf4b8ee2d289d5c6cf496b5",
+      "bytes": 3507
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N020_R00_S3409\\training_complete.json": {
+      "sha256": "30880af4fc3e8471aa9ec7d8a05adcd508e54f0556120f450d5ad5242b63a7de",
+      "bytes": 765
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3407\\run_config.json": {
+      "sha256": "81093595ddc68d9cff69aafabd3862d521e93c2e5b547c3c15f837648c5c0611",
+      "bytes": 9406
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "7b03b5659f73be4cf3861bfc8d646190aee79c115fabb91bc16b9f742ca4905a",
+      "bytes": 3620154
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "b8431a64432a159f7ec0996e3092613fc3ccbc1d16b06c7697aec714952c60d5",
+      "bytes": 2830
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3407\\best_model.pt": {
+      "sha256": "e2da56008604f50f4da0ad7596c5c1215946f7d2f7bf2383f871db4b33c7a18e",
+      "bytes": 7491410
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3407\\scalers.json": {
+      "sha256": "890c9184e174a2b968f2c6658d3b5688f6125cf714b76435bfb638098de8788d",
+      "bytes": 3695
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3407\\training_complete.json": {
+      "sha256": "a04d0a66d0f8c20679791ae5e6e47b274c0f1bf0fc19e8fe1db2fff0cb813669",
+      "bytes": 769
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3408\\run_config.json": {
+      "sha256": "21da621361615823641c1a169e69d9d378de34dfa16b51a776c08204332fbc3b",
+      "bytes": 9406
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "41e4011027270be86685d6cc9801a053bdf35cf75a1db83053422ab35d922d14",
+      "bytes": 3620398
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "e85e710d83cb1f311f77bd3fedac69052b7a3623cfe705983c411e157f0b898f",
+      "bytes": 2827
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3408\\best_model.pt": {
+      "sha256": "c18f097d1d421297de08916111d65328addb8f6478a1fe9b24e809e060159634",
+      "bytes": 7488402
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3408\\scalers.json": {
+      "sha256": "890c9184e174a2b968f2c6658d3b5688f6125cf714b76435bfb638098de8788d",
+      "bytes": 3695
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3408\\training_complete.json": {
+      "sha256": "a795052bfa72115cf48580c57848232da96e300847bb3a32b92354dba5c57e05",
+      "bytes": 767
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3409\\run_config.json": {
+      "sha256": "058dd1163ab26401804e4318116f0800e996f131ccd6a48a1554c288bbef20ec",
+      "bytes": 9406
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "e619e120527714089b864bd643f85ff5040d8a45eb4b8ad942762a358aeefe97",
+      "bytes": 3619619
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "16be4cbb46af45c20d196f2b2f2cb83611f01ea78ed23094eac427ca4646a484",
+      "bytes": 2829
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3409\\best_model.pt": {
+      "sha256": "11cfbf1ced5f20dfba855a0dfed7d83c3a95bf6dc9d744f8405b57c9c27bffdf",
+      "bytes": 7487570
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3409\\scalers.json": {
+      "sha256": "890c9184e174a2b968f2c6658d3b5688f6125cf714b76435bfb638098de8788d",
+      "bytes": 3695
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N020_R00_S3409\\training_complete.json": {
+      "sha256": "34b998c6adfbacae719af6d5f4f039095384539027881de484e6fb16b39730f9",
+      "bytes": 767
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3407\\run_config.json": {
+      "sha256": "118bd707805141ab7bbeedd4bdfbc484f1f7541f96c20c864d02c6f38fd5c2a2",
+      "bytes": 9606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "dca501f0885f6543e84254e31bcc2714e1f5f6ee297e50f5b4421391baf78e1a",
+      "bytes": 3621916
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "ef2e542b8266a73e1dcb732906c8feeb0ae5fa1d24ea01628f7c0aa99285f9a5",
+      "bytes": 2825
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3407\\best_model.pt": {
+      "sha256": "5b85de85f6b2012a16419cbe6f13fd271b56b4323be5cef15029c352416a5e43",
+      "bytes": 7486428
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3407\\scalers.json": {
+      "sha256": "0e9d71097c7e6bc624efdd84860d575b8a5fd33edc398d887d222c5463fbe255",
+      "bytes": 3928
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3407\\training_complete.json": {
+      "sha256": "fc5995e6238dd1b725990c315e69e2cef0eee988883e5157449bb19768d909cd",
+      "bytes": 764
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\splits\\train_rep00_N030.txt": {
+      "sha256": "53b6c39d1c226bf64d142d15b448895f79371d5baed310bbeba7fd823657a989",
+      "bytes": 390
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3408\\run_config.json": {
+      "sha256": "2a852d3f1598e64e38f7bd8f0b90b365c2506fad9738d58f28ae0132730090df",
+      "bytes": 9606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "7120fd4d488b7c652c552e7cc7aead99ae467d17b3b8110f1c4db12d599ffa33",
+      "bytes": 3620135
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "c49b66063fe09435e5ce8518bd308e659bddefdb175558959cb4b01a8fceaa09",
+      "bytes": 2829
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3408\\best_model.pt": {
+      "sha256": "5703d8d58915b90963c08db71d5be0ea25863ab18350002fa359ed79bcf97308",
+      "bytes": 7488924
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3408\\scalers.json": {
+      "sha256": "0e9d71097c7e6bc624efdd84860d575b8a5fd33edc398d887d222c5463fbe255",
+      "bytes": 3928
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3408\\training_complete.json": {
+      "sha256": "b3403511bd6e385f7f1d5ed42c3d126ae1658960b4e9cc6a397508c1f972b8e4",
+      "bytes": 768
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3409\\run_config.json": {
+      "sha256": "0e633e20302e3ea28b601cacec43fe7cfc24785037c9f98ced0fbec83a411c02",
+      "bytes": 9606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "9489059c5384ae97bb34633dc9ebc118941dd3ef3500739720e7fa015e18c570",
+      "bytes": 3619660
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "8bf8154b77335c99fa993bf01d120669dee5fa97270731dc69e51bcdde561e20",
+      "bytes": 2822
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3409\\best_model.pt": {
+      "sha256": "c7256cd12ec205177d6ee43ecc778440ac25bb0531fe7cffcb6f59a8e28a082d",
+      "bytes": 7485596
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3409\\scalers.json": {
+      "sha256": "0e9d71097c7e6bc624efdd84860d575b8a5fd33edc398d887d222c5463fbe255",
+      "bytes": 3928
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N030_R00_S3409\\training_complete.json": {
+      "sha256": "3a0218b6004d9d3d374233b714beea4578998eaa11f88610d600599e305b6785",
+      "bytes": 760
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3407\\run_config.json": {
+      "sha256": "2c22ffb24f4eb0f884bd71e33f3963ea4e7523355f5e19f321eeb3e6bebf546e",
+      "bytes": 9606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "a82ed65131926624939644c3a3f56d9971cf3be56f916511809fda3cbc1d25a3",
+      "bytes": 3618567
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "3376ab6a55948f9d0411fa4ccf38dedc6e7ed4fcdf9e3c427ff778e6de628ee0",
+      "bytes": 2823
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3407\\best_model.pt": {
+      "sha256": "7a7f8e87904bb335f3d3727137e811969844c1fb126b529e64159773bff49a47",
+      "bytes": 7485788
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3407\\scalers.json": {
+      "sha256": "0d67c070c252bab95912b3f9b826b5cb4ef418531c0a223dda90ffba75752780",
+      "bytes": 4041
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3407\\training_complete.json": {
+      "sha256": "09bd3b28416c0117e2a7d7a89d526a1edc93c1d28d50edec1b319a24f0831c80",
+      "bytes": 760
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3408\\run_config.json": {
+      "sha256": "9c90b9d20007334be4ed9501ead32b03ab2b0fd33dd975a83808195fe920a67b",
+      "bytes": 9606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "1dae974c1d88ddae4d94e5aaf8316878d0fb287b7d90532f92c91a1dac3c4fba",
+      "bytes": 3618756
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "b0da913649e6b5f369277a9a81c4df1392a376a500fec3f10c7a7f7159a9f205",
+      "bytes": 2826
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3408\\best_model.pt": {
+      "sha256": "bd510ae211b4781d53bcb41b89af5b7041fe4516a3040a8d08943f57ec6aec84",
+      "bytes": 7491996
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3408\\scalers.json": {
+      "sha256": "0d67c070c252bab95912b3f9b826b5cb4ef418531c0a223dda90ffba75752780",
+      "bytes": 4041
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3408\\training_complete.json": {
+      "sha256": "a8d5e5299254a71febdbfddcddc1fb77527947d11801693714c8da80b353260f",
+      "bytes": 766
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3409\\run_config.json": {
+      "sha256": "d58142463758319fb363709f6d9263911bb99d325cfc223d976bb7600ce9c719",
+      "bytes": 9606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "575de115ec6ccfc2b6529701981f56e351e461b873a11b96eaa97d3b8cd83c8f",
+      "bytes": 3618898
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "649a821dd356d9285f859885739d83f5615c47d04d530153bba02ca200127c7b",
+      "bytes": 2826
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3409\\best_model.pt": {
+      "sha256": "761ffaaeddaa5dfc49a2b7d77ceff9c91e340bffb28a5e8d336d8a4d5e5c317d",
+      "bytes": 7485788
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3409\\scalers.json": {
+      "sha256": "0d67c070c252bab95912b3f9b826b5cb4ef418531c0a223dda90ffba75752780",
+      "bytes": 4041
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N030_R00_S3409\\training_complete.json": {
+      "sha256": "a8feeca1c98f4aba4f77bddd6950786a12dff3cbbcbd16463ccfdda0daca20c3",
+      "bytes": 765
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3407\\run_config.json": {
+      "sha256": "ae8105e47eff13b8382308c44bc4e72ec3085827139b2e0ba8aee44ad21aca0d",
+      "bytes": 9606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "890c99b856d4bd097a0d91499f2eee95a403e682fdb86e90a5b2c00256c53820",
+      "bytes": 3620374
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "29d9a2e3202dcb94bf6e109f52f2ab251580e57bd6567128f6c4041bfa9ec00b",
+      "bytes": 2833
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3407\\best_model.pt": {
+      "sha256": "6384656316cf6f3be8c1f9eca9d3d4474695707f69a03b204d73a88369d8b5b2",
+      "bytes": 7489490
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3407\\scalers.json": {
+      "sha256": "25a8ea1d69724f48e0411319a3c6e456904fb2159662e1550c87c2c051082af9",
+      "bytes": 4229
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3407\\training_complete.json": {
+      "sha256": "862fe290b35ea48639397556c48823227e5afdd6621bd3b25bdaf4563e2ee506",
+      "bytes": 773
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3408\\run_config.json": {
+      "sha256": "18cd2707d5bcee878f229fa503e51b258c586ddf4fdf086c0825ecc34cff32f1",
+      "bytes": 9606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "ef6410cf88b6d7ef34bb1db0fcc7c5f3001d3ecc3e4c339eb3504ee821b99db8",
+      "bytes": 3620226
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "06b12a53940b67df5a0a334d13261e94aad1cc087ea2a3b5840321b0a50e098a",
+      "bytes": 2831
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3408\\best_model.pt": {
+      "sha256": "7cbf55f0d93aaaa599f0fb05ebc213c96e51d45482db8939d328fa89099714bb",
+      "bytes": 7488018
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3408\\scalers.json": {
+      "sha256": "25a8ea1d69724f48e0411319a3c6e456904fb2159662e1550c87c2c051082af9",
+      "bytes": 4229
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3408\\training_complete.json": {
+      "sha256": "3e4030036f0978b95aec80ce574f7aff90bcc7c55f673fc68de0e95051f360b0",
+      "bytes": 770
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3409\\run_config.json": {
+      "sha256": "16e70590e394e46715325e2e8730cb689e03ef7d001440e67b33cf6adbdd4112",
+      "bytes": 9606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "fe1cdeedf043c4b0639d3c94c9705f73520fabc67785aaf254fef8fd934be73b",
+      "bytes": 3620148
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "335ed16da43b3d85d957b739717f2fad5f53c78de1923879eaf31f42aee4075c",
+      "bytes": 2829
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3409\\best_model.pt": {
+      "sha256": "cc341dc6149c0c542dabebbd790f4775297b21b3a7f17315fdb8d81b62f8675d",
+      "bytes": 7489426
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3409\\scalers.json": {
+      "sha256": "25a8ea1d69724f48e0411319a3c6e456904fb2159662e1550c87c2c051082af9",
+      "bytes": 4229
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N030_R00_S3409\\training_complete.json": {
+      "sha256": "b6d1e1d28fddc168cd3974d3bc546e9cd937ac0a93bd30448306775898e51ff5",
+      "bytes": 768
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3407\\run_config.json": {
+      "sha256": "07a81cbd0c3ba39bc89177b1639a7725d87a817d6aac9b3bfdce1d179a056945",
+      "bytes": 9806
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "d497d230b8586f25d4fbcab79b7b90f37d0f1b267e8872a03e3c1ff0f268cf15",
+      "bytes": 3620687
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "6ea13b7d1d263283878322107e2838a3d749d9c97213d7a1378c8bfaf9c69b8c",
+      "bytes": 2824
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3407\\best_model.pt": {
+      "sha256": "710d181b7ddf4d9882889114e28dc85575b6652e9c8dc5d76a18c4f4ac97d7eb",
+      "bytes": 7486620
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3407\\scalers.json": {
+      "sha256": "7cfc0aa38c4083027a2de3a9637346a6269461a14f016b6066056eff735cec0f",
+      "bytes": 4470
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3407\\training_complete.json": {
+      "sha256": "71112f49ef4cedfc0cd0e94e0cd398d6f47105dab8d850e5c0630e5d99b5fa3a",
+      "bytes": 761
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\splits\\train_rep00_N040.txt": {
+      "sha256": "00c6d7df9a8ba661bfed706e09f3d55540ad55f7ac0076b82ae99a30003828a8",
+      "bytes": 520
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3408\\run_config.json": {
+      "sha256": "be0698b71c1ad60173d131c749fda0eefecc269ef69b1b5e4c0d2d9d256dd878",
+      "bytes": 9806
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "56fc19090bacb93ceca7fb6f9d9e239fc5b0d5a31fe80e2b23c3a37d9929e317",
+      "bytes": 3619941
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "31a0f4f0795b4c683c4bb58b0fd1a978d65ef2d3bec1c8c41eab9eed8fc531b9",
+      "bytes": 2825
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3408\\best_model.pt": {
+      "sha256": "7154eb1188aa445def7c145f57d4aed84923ff0dc3a10109208aa3c523c5c0ce",
+      "bytes": 7496220
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3408\\scalers.json": {
+      "sha256": "7cfc0aa38c4083027a2de3a9637346a6269461a14f016b6066056eff735cec0f",
+      "bytes": 4470
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3408\\training_complete.json": {
+      "sha256": "775967faa8483b35c55aa919663680f28b59a8eb594b09951bb533a7c32e5512",
+      "bytes": 765
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3409\\run_config.json": {
+      "sha256": "14b657c556a30e83874758a0f3f1b48cee94c857c32720fb46b4ffdbc54bf598",
+      "bytes": 9806
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "988175970ea204ebb7c1f78859ae47128b52a60f88265f9f7d4084348d03c104",
+      "bytes": 3621457
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "8e7c78b70dec2e7b35a233952f486965a786af04c8ca0f1e9a0ccb6560081bfe",
+      "bytes": 2826
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3409\\best_model.pt": {
+      "sha256": "04f978b6307a5f2bcf85a24a6b3a7d64c248ffa86e643498eb6f6f55bf88017d",
+      "bytes": 7491036
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3409\\scalers.json": {
+      "sha256": "7cfc0aa38c4083027a2de3a9637346a6269461a14f016b6066056eff735cec0f",
+      "bytes": 4470
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N040_R00_S3409\\training_complete.json": {
+      "sha256": "c31ca6d5075639d48d1c3bf7ab89083a196f912765905fb3a2bc745bc53b9cbf",
+      "bytes": 766
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3407\\run_config.json": {
+      "sha256": "a7e93f6e717ceb280557626145dd399db27dd2917806ca60b9d265dc3dcb5558",
+      "bytes": 9806
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "329b001459a7632ae88784790a3c056bd26fcdab201add2f990c7805d5512f58",
+      "bytes": 3618968
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "0918bbd719a24e862a66b5553de4dccb50ef8b30d6008d1d8b7ce3cbb0e869e2",
+      "bytes": 2826
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3407\\best_model.pt": {
+      "sha256": "434297ec28827eb002925beed451f0bbd7d15ec1f50f7ea01cbf64d10ff879ae",
+      "bytes": 7489628
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3407\\scalers.json": {
+      "sha256": "4a56344949d1404588f57da9863e45a9d4731438ded1ba011798242f7843ffa6",
+      "bytes": 4581
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3407\\training_complete.json": {
+      "sha256": "db6e644a86d5b35cf4ac228d723e9915284a690a65807da84c00d66d30f73ed9",
+      "bytes": 765
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3408\\run_config.json": {
+      "sha256": "e3105f14fccc368f919ca8004bb9ce30c5d0e351e74399e88e9b475edd12bd3a",
+      "bytes": 9806
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "a0870821dc9059e5829620d50d3a25a17b31d6da2a2ac9539180aa5fd1a145ce",
+      "bytes": 3619409
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "39a20e8473111b75387b419a109bc287a3302250e2f6c78085a199a3eb256fd4",
+      "bytes": 2828
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3408\\best_model.pt": {
+      "sha256": "cd99645679ed33a94d19ec544ae5da4857ce1ece9189ab858a92c4f74112e612",
+      "bytes": 7487900
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3408\\scalers.json": {
+      "sha256": "4a56344949d1404588f57da9863e45a9d4731438ded1ba011798242f7843ffa6",
+      "bytes": 4581
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3408\\training_complete.json": {
+      "sha256": "b5df2f3dcdc560774a81069bfce4e2329de4a1a047ace1e79314f82c4ee918b3",
+      "bytes": 766
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3409\\run_config.json": {
+      "sha256": "394e3bc996f1d01377eeb97f694aaf5a1bcc1c91eaf1426cd80f664b2adf93ad",
+      "bytes": 9806
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "e0a97eb323f01b23225541eb1fd242016f801ab7c0380689fba8293967967a1f",
+      "bytes": 3618850
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "c1d7d95e3c2db52c5ada30c371a2cd3e9c7f12d42db0cf4a408b95971c202ea8",
+      "bytes": 2829
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3409\\best_model.pt": {
+      "sha256": "ae09475d7ae516ef5428283dfeccb9cfcc8b962701b50c9e71739975482f3848",
+      "bytes": 7489756
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3409\\scalers.json": {
+      "sha256": "4a56344949d1404588f57da9863e45a9d4731438ded1ba011798242f7843ffa6",
+      "bytes": 4581
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N040_R00_S3409\\training_complete.json": {
+      "sha256": "fc5f13aed70e3c04fdab61c85f08d7eadcc9f58e29e7bafa232c7eba6a9a3dc8",
+      "bytes": 770
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3407\\run_config.json": {
+      "sha256": "fe523659d70f3fac11edcaad8b258affc8087d2473d1d0d282ebf952064e8c49",
+      "bytes": 9806
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "1adee1104420af46dbc5cdf7fed7c62538190d6ce71bfe3361cd8a3cae1c750d",
+      "bytes": 3620282
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "b859840ed89076751ae0ad0ef354e44c98ab7ebc1c68bef95768793a17efcdc2",
+      "bytes": 2829
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3407\\best_model.pt": {
+      "sha256": "11fe5ed8939d900ecc0e011239772a3ff51352882c1faba54658d029f61ad2a0",
+      "bytes": 7492178
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3407\\scalers.json": {
+      "sha256": "f59756557a2bf8c25e8ffeaee6a82af84a28672bc6d11ac5afb41486ec19dc7d",
+      "bytes": 4769
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3407\\training_complete.json": {
+      "sha256": "c976d0cdbdffde70384c03f14e4c063fd0325fd19d8268936a497d68c22286da",
+      "bytes": 769
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3408\\run_config.json": {
+      "sha256": "e603aa6689d5ea78fe30a8389d9b8e5816ea1581e6ee322039cc5fa3368dbbca",
+      "bytes": 9806
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "d895dda0744a8fe3340745d098a148681d5271a2340dbfd120534e32ed1215b0",
+      "bytes": 3620376
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "bbd35c5fb9845b31ef6e684d87aabac13dddb20654abf4cdfa10ef0892a5a71e",
+      "bytes": 2830
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3408\\best_model.pt": {
+      "sha256": "0770e0e993d0075825f014d0d286e55e78389722a4ace6a4d3df88ba61befcaa",
+      "bytes": 7491474
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3408\\scalers.json": {
+      "sha256": "f59756557a2bf8c25e8ffeaee6a82af84a28672bc6d11ac5afb41486ec19dc7d",
+      "bytes": 4769
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3408\\training_complete.json": {
+      "sha256": "a550aa081f8daae436454319d055cb34e8861c7424ca87b43f03e4808b5e81e8",
+      "bytes": 771
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3409\\run_config.json": {
+      "sha256": "da4be650728ed32403e24b83e23e8bd00e198c4f940d753f4975648b1e011377",
+      "bytes": 9806
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "1778d870cc64fe590563a9cbad363700ebd25356429cc0e35720e89d399cc755",
+      "bytes": 3620196
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "2c431bbe69a395a07e1be5c9ac6eb6ea2824bde003f3921d69c1fbc812d8b3c5",
+      "bytes": 2829
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3409\\best_model.pt": {
+      "sha256": "a9b863b156c5a5ba6b88016a098b5fb7fd3a22879b3c12d509ed168570ef2d40",
+      "bytes": 7499474
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3409\\scalers.json": {
+      "sha256": "f59756557a2bf8c25e8ffeaee6a82af84a28672bc6d11ac5afb41486ec19dc7d",
+      "bytes": 4769
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N040_R00_S3409\\training_complete.json": {
+      "sha256": "9be5eda0e42e7ae0357d8c81bd9264f084516d9d2a219a7b6c42734e8d58e267",
+      "bytes": 770
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3407\\run_config.json": {
+      "sha256": "73f673c05c2c355f15e15eb69ab810b2aa2f4fe2f74979f730f1d36fa890a317",
+      "bytes": 10006
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "6437485424edf4f6af629f9e42179a2ae6276ec1c2d39909529d5c91957bc83e",
+      "bytes": 3620682
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "98d3eb1b9b088d1ab95ce47dcf29cba616d378ad7ea9c60bbb297dcbb589fc87",
+      "bytes": 2823
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3407\\best_model.pt": {
+      "sha256": "f7d60ccf173f24e2c941f7545579a688bd1884b6a30e5c07edeac7a069a1c7cc",
+      "bytes": 7493212
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3407\\scalers.json": {
+      "sha256": "a8ac8dc8c8d39e993890f269b655458310c0a97f0d6eb1a6c556671a35454108",
+      "bytes": 5004
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3407\\training_complete.json": {
+      "sha256": "0c78a5c9eafecb3b274c5992ef54ea0ca032291b2244b4f5de7cbf94bbcfaaf3",
+      "bytes": 763
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\splits\\train_rep00_N050.txt": {
+      "sha256": "2145faf3b294b2eaff6048854c5a4f0227448f4bafda59b14fb4b773f1c894c7",
+      "bytes": 650
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3408\\run_config.json": {
+      "sha256": "15ef5df63d687cd40075c5fbb9b4cf0e49aa5fce810071247a912adc311a7607",
+      "bytes": 10006
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "243de158d4b67a7affb5119f9141159d5142ddb09b1408ca8bab088c058bf7d0",
+      "bytes": 3620655
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "3a156506f5dce33326aeecacef6692f3f5fc6cff62bcbdffcea05f9dd6901d31",
+      "bytes": 2830
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3408\\best_model.pt": {
+      "sha256": "0aa4dcbb284421bf0349d4344484caeaf0f5379c99908b20202435368e347306",
+      "bytes": 7495260
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3408\\scalers.json": {
+      "sha256": "a8ac8dc8c8d39e993890f269b655458310c0a97f0d6eb1a6c556671a35454108",
+      "bytes": 5004
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3408\\training_complete.json": {
+      "sha256": "17ce436d63562efa00c358285c6d588f2a7429291abbce6be8e3e530da30fe9e",
+      "bytes": 771
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3409\\run_config.json": {
+      "sha256": "d330c3b412df0e223b22eee1ba5c2bf7a8b1cde01731cf00bc1b21ad3abe8229",
+      "bytes": 10006
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "df8d7cab60c64aaf88694f9d26da20f1cf50217efd28887293d550c91ab9cc4d",
+      "bytes": 3620146
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "d6bdff5caf430272bbdcb7d3dd79f80d841bef0b0d7db77a20af9ecbddf36d8d",
+      "bytes": 2827
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3409\\best_model.pt": {
+      "sha256": "c3341078d5006b2778c718b02339526bbd18748d8e068a9a3d15821de721ec34",
+      "bytes": 7499228
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3409\\scalers.json": {
+      "sha256": "a8ac8dc8c8d39e993890f269b655458310c0a97f0d6eb1a6c556671a35454108",
+      "bytes": 5004
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N050_R00_S3409\\training_complete.json": {
+      "sha256": "d5397320ee9ff12e255f80999ab740b768cc3fcfc9512def4192601f83626071",
+      "bytes": 767
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3407\\run_config.json": {
+      "sha256": "c2f6f11d8924ff380f822a130bdea65577cd75d7bd9d71859e9622c744f294af",
+      "bytes": 10006
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "d20c27bfd1c4bad856c095de61bc54dc07b0577ebd839769600a4b7903a15660",
+      "bytes": 3619059
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "e5a99e010b1a84eb9f45007a71d7dc5aff476a8c0f20d0e402e9d996a4d1e56b",
+      "bytes": 2827
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3407\\best_model.pt": {
+      "sha256": "9265a3d697fd3e32fa7cbc32ee6126c36cffde28a598f24dacf164b52dfef07f",
+      "bytes": 7488796
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3407\\scalers.json": {
+      "sha256": "5221463a8056f5cbc066fa5d8ba9e2f6cc26dd4f87e18498b9ef99b246ed4dc4",
+      "bytes": 5120
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3407\\training_complete.json": {
+      "sha256": "dcfafa98671588ad2789bcda34cc4d27c269e74909416ea96cb6b3eb676c2a91",
+      "bytes": 767
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3408\\run_config.json": {
+      "sha256": "071a1e5f15bf2c73444e5041b376a764e3b8a0b3bb51e44bec2aa5a80fe00e62",
+      "bytes": 10006
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "3c45b9708c80a0cf14c22b03227bf2bc0ff322a6db0e05869df6fee89a32c466",
+      "bytes": 3618966
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "86c200c5b1aadfbd8502e6e42426247b20f276dd683cb3e69b0c1ca920159f7d",
+      "bytes": 2829
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3408\\best_model.pt": {
+      "sha256": "6d954fb55a79d035150aba8215e130261e2daca6fd3c77beb2a61fcf04dc9e29",
+      "bytes": 7487836
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3408\\scalers.json": {
+      "sha256": "5221463a8056f5cbc066fa5d8ba9e2f6cc26dd4f87e18498b9ef99b246ed4dc4",
+      "bytes": 5120
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3408\\training_complete.json": {
+      "sha256": "bd27078ef1e037d110824b315ada6aaf2ef2e303c987deeb3a4f8b6dec627a5f",
+      "bytes": 768
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3409\\run_config.json": {
+      "sha256": "fb022fa56087d863e7e1630f84df39e340c0701af86bc022b9d148c4b571a079",
+      "bytes": 10006
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "8977c89755e57b4cbc40eedfd91bb22d1fa589a16778c8287d3197bf935e4e90",
+      "bytes": 3619059
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "ac15b3b8c7f5124f29d92ad9803ebf45ad479882a0a994776dc5732206f484a5",
+      "bytes": 2830
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3409\\best_model.pt": {
+      "sha256": "589400447b785f95dd03ec9a32be8bbdf220490afd6133398b69f2932fd15a95",
+      "bytes": 7488604
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3409\\scalers.json": {
+      "sha256": "5221463a8056f5cbc066fa5d8ba9e2f6cc26dd4f87e18498b9ef99b246ed4dc4",
+      "bytes": 5120
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N050_R00_S3409\\training_complete.json": {
+      "sha256": "f11952364d7962ea26f93ab7a77d827e07d0a72ebc1d7fcd158e7cab8f7fc5c5",
+      "bytes": 771
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3407\\run_config.json": {
+      "sha256": "fdd4c2e099219935b030e0f7a592aeb6aacb890f665241346410180fbbd62e82",
+      "bytes": 10006
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "56f4d9854aaa1071711c5d505d386cfcde9120be77a42d727907ac087888f9cb",
+      "bytes": 3620154
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "56d26b63802f0fc1118e98be5c19dd8b7aab6f7754824ac61ca8001d7721cc6e",
+      "bytes": 2830
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3407\\best_model.pt": {
+      "sha256": "b7d9ef541613ef2fa1f9cea90d481b8b958488f5d1b64e66134321ad7235c1a3",
+      "bytes": 7502162
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3407\\scalers.json": {
+      "sha256": "5f313b1383c10f38b6c905ef4ce59c59cd20310b970717c2eb5c722f5d1243b4",
+      "bytes": 5310
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3407\\training_complete.json": {
+      "sha256": "c12a4c9dd20933a5a6cfa85af781e10e97becdc3bf14aee7965bab75c0eaf922",
+      "bytes": 770
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3408\\run_config.json": {
+      "sha256": "5f4c0380214672c29b4d8fb74f3fbd8185e3911dfa8f78457b1031373ab82eb6",
+      "bytes": 10006
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "a9cbe104fbda2c26cd456791bbf0664735686d16967b5b3bf2faae871edda38e",
+      "bytes": 3620217
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "637d0a5dea6ff44e7e8fe219a78790767a9d9c00b50844f59949a0346286a10c",
+      "bytes": 2831
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3408\\best_model.pt": {
+      "sha256": "fe7ea9879582f1a5e9a51fa139ddfb82ba4b96ba8e874eb28987611c832a0865",
+      "bytes": 7493522
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3408\\scalers.json": {
+      "sha256": "5f313b1383c10f38b6c905ef4ce59c59cd20310b970717c2eb5c722f5d1243b4",
+      "bytes": 5310
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3408\\training_complete.json": {
+      "sha256": "0ca0c1d8bbf355cf759ae0e4206240776f848f5ca00d4f71e10145f0476f98ec",
+      "bytes": 771
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3409\\run_config.json": {
+      "sha256": "a53edad198353455440fcd0236eb70d4120d52466866fba87bd729aaa574145a",
+      "bytes": 10006
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "a4ab749f4089c52064213d6603a7a08ef3c7f1e04108bdb86cb392ab5d7e7911",
+      "bytes": 3620241
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "68017a1a54f5ac79d12b0f63e1de1c2630478124835707a48c59ba847cc11abd",
+      "bytes": 2827
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3409\\best_model.pt": {
+      "sha256": "d2c886437e10bc53eed94ef57a817e0c936e526bed31db9c2f55ae566d73db84",
+      "bytes": 7493586
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3409\\scalers.json": {
+      "sha256": "5f313b1383c10f38b6c905ef4ce59c59cd20310b970717c2eb5c722f5d1243b4",
+      "bytes": 5310
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N050_R00_S3409\\training_complete.json": {
+      "sha256": "6eae972c11be480c6337c3ae0e8e5e474c23f7b36b7edb1b3201bab2ef97d625",
+      "bytes": 767
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3407\\run_config.json": {
+      "sha256": "18e5d5de3356084cbf3c9877140f81f557c2329880081c76bb04a05d790de2d2",
+      "bytes": 10606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "2bdc0af70dd17db3bfe00ddcefb47dcfbf5d5f4b0fd152390896e06473cf25f6",
+      "bytes": 3621022
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "f710ad8441f581d63972b7e00088134f34dabebcdac4f743d88edf32efe9c8e6",
+      "bytes": 2826
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3407\\best_model.pt": {
+      "sha256": "bc211885f1eb2ee8a62cc0e3d58cd8da978dd5af35a204f6e833df785fff0722",
+      "bytes": 7500828
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3407\\scalers.json": {
+      "sha256": "de411ec8fe66f44667d192bcfaa15c344fc48198b886745ce8a054ee25d17182",
+      "bytes": 6619
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3407\\training_complete.json": {
+      "sha256": "89903fc26d9fff031ba5684039edf36750b2446db7e965646019e4f121eb9a25",
+      "bytes": 767
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\splits\\train_rep00_N080.txt": {
+      "sha256": "5ae4d3edb74aa47e14364b219a87d4e3dfa963cf2367b5adc38b9e5139e2b06c",
+      "bytes": 1040
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3408\\run_config.json": {
+      "sha256": "a9e59b4422517be00b3ff4a7564d2e0444041b8d996e146de7a9e909d32b3b18",
+      "bytes": 10606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "10fd86ffc437d71f8d57c11dcdd962610edc0e08c103f74115596cd0b8737d99",
+      "bytes": 3621262
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "d57f1d056956fb1b0ea9257ce59686385e886d3d524009989d96b7b859ad6a65",
+      "bytes": 2829
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3408\\best_model.pt": {
+      "sha256": "e9a07f69fb4948530f15348081289a7fe6d12721c123403c04f6c053160eed3e",
+      "bytes": 7498268
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3408\\scalers.json": {
+      "sha256": "de411ec8fe66f44667d192bcfaa15c344fc48198b886745ce8a054ee25d17182",
+      "bytes": 6619
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3408\\training_complete.json": {
+      "sha256": "39f699f07ab8aa1d6a6a6e8ab176ec5fbcbb7f14b9bb6474980012905bf59e96",
+      "bytes": 769
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3409\\run_config.json": {
+      "sha256": "6c080a035ebcd0d5a8bee4f5b21d2daa95caf4ad00aa0a42a0a4754ec33defe2",
+      "bytes": 10606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "cdc6cf70f0e48f1a1e24c94568976de51ec59ed99e6f9b6ef3e063e3cdef6ee0",
+      "bytes": 3620831
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "7cd029107f2564a2a47e43ccd7ca993b83deefdf0209af8188f5803f374507b2",
+      "bytes": 2829
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3409\\best_model.pt": {
+      "sha256": "75d3d6edabc5970c75248f6e3b3fdc18dfcf0276fbb2236c198686ce8118e7e9",
+      "bytes": 7494620
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3409\\scalers.json": {
+      "sha256": "de411ec8fe66f44667d192bcfaa15c344fc48198b886745ce8a054ee25d17182",
+      "bytes": 6619
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M0_N080_R00_S3409\\training_complete.json": {
+      "sha256": "a07a32826fc3df6212b73ff3702b9070dc508462a7c0ee050433207763f5e585",
+      "bytes": 769
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3407\\run_config.json": {
+      "sha256": "12e8dbd5b67d96f72aae5d28b45956fb190918fd99780973faff2370afa4e681",
+      "bytes": 10606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "5aa82fc2cc2c28edf8c4009c707d156e2e7beb14996c74cba6adb5340d77fecf",
+      "bytes": 3618659
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "2991bad02b71a2add4eee16098fc852594cefbb670d591af61baae724b003e3c",
+      "bytes": 2829
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3407\\best_model.pt": {
+      "sha256": "df1066276eab1ed5c651a9a0e0225ef7caadc489fba663ca4541dabbb1e44b80",
+      "bytes": 7497884
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3407\\scalers.json": {
+      "sha256": "d6954a73b8d208a1052334d59cb51224c2373fde05b87b1e8549100a120b9187",
+      "bytes": 6734
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3407\\training_complete.json": {
+      "sha256": "b8122e3707d40ed21c3882d600f0ead53df99a78e19cee6fd3f2cc268cc66f80",
+      "bytes": 768
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3408\\run_config.json": {
+      "sha256": "785712ab4d3f6c1f44f4bce1227bfcca0f020714287970b3fe9329e77527fcea",
+      "bytes": 10606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "2531c498088eab19d98ae4f150f25ec5fbd7d4fe3c772ac0464d5fbaed8ff1c9",
+      "bytes": 3618620
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "d8e2111fccc4f0a5d753b56fe73b46b5be2e2870d4d4c389cbe6c3d2df206ac1",
+      "bytes": 2826
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3408\\best_model.pt": {
+      "sha256": "482195f4761f926cc4bd750c5e5784db1da1256401cf7ced157650833c216573",
+      "bytes": 7495452
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3408\\scalers.json": {
+      "sha256": "d6954a73b8d208a1052334d59cb51224c2373fde05b87b1e8549100a120b9187",
+      "bytes": 6734
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3408\\training_complete.json": {
+      "sha256": "07c9939be82f75e67cbe653dfab5507b1f759f696fc223e201fb65ab3719dae2",
+      "bytes": 765
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3409\\run_config.json": {
+      "sha256": "950ea6ce475509b9c5e73e569ff0729611dd909b1975bd2584fb4aa0c47bb4bb",
+      "bytes": 10606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "6648944f65b917711e916bab5b4e456019ecda27e078f1ecf1ef4f79cbfe0025",
+      "bytes": 3618500
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "fb3bf551c82731ede3d08cf3282e10d10ffdade770ececb8a8f2009032486ae5",
+      "bytes": 2828
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3409\\best_model.pt": {
+      "sha256": "6d003c8e23e189518b53f6c3c83745423ed8788b61981bc39a94756cb3a0e8a3",
+      "bytes": 7497628
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3409\\scalers.json": {
+      "sha256": "d6954a73b8d208a1052334d59cb51224c2373fde05b87b1e8549100a120b9187",
+      "bytes": 6734
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M1_N080_R00_S3409\\training_complete.json": {
+      "sha256": "793afcd48d53ce958b439d241d4964b518f23d9b0350cecbb66b20290a82262c",
+      "bytes": 767
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3407\\run_config.json": {
+      "sha256": "e769f5dd6961176ffc3768de600a8488eff3e6aa0fac91d7e1778f2efaa99ccd",
+      "bytes": 10606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "9a529ec48d649a24e656d888a3a44e5f37956f3e9081207f52aca44cdd04b7ee",
+      "bytes": 3620274
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "4d9922b62189e545acf9f26c611884d2ccac9305188110df2cc72495f21a3f9b",
+      "bytes": 2831
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3407\\best_model.pt": {
+      "sha256": "11b782db5a44b40c1f620d96ed264637301550a3fb0e10ecb37953f80a1258c5",
+      "bytes": 7497938
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3407\\scalers.json": {
+      "sha256": "a42f8a499393980015fb4ba013599e455ad935cbc7f97c7b95b2427b1905d95b",
+      "bytes": 6920
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3407\\training_complete.json": {
+      "sha256": "50fd482f428f66012c42c265b6a4d2f909c006df14c2165fb07e786eba683c7a",
+      "bytes": 770
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3408\\run_config.json": {
+      "sha256": "f287810aea7ea9fb3767d091f17a9c725a515751120ebfdf5a17150861bb5739",
+      "bytes": 10606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "421d8bb38270bbbba685ad577be84b08819129d4dd6e58cb3b4056336a177caf",
+      "bytes": 3620197
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "4addc81a9833f3572dad445dfa3f16e2006089f5d54a8a6ea20c764183ab0c99",
+      "bytes": 2831
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3408\\best_model.pt": {
+      "sha256": "53519bcfa037926a72fd4c0c1e3c3153338aa953242edcb0a8338df48c312969",
+      "bytes": 7503506
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3408\\scalers.json": {
+      "sha256": "a42f8a499393980015fb4ba013599e455ad935cbc7f97c7b95b2427b1905d95b",
+      "bytes": 6920
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3408\\training_complete.json": {
+      "sha256": "bc2cb79f0209a398d7dedb10593ce3810446e0dcf615ea77269854442b304779",
+      "bytes": 770
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3409\\run_config.json": {
+      "sha256": "434d6905bf6640ab9914692bb2cf1812037acce80c93a3ee1e9412156b9a8dcb",
+      "bytes": 10606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "62adb95487c5327bea8a7d24f08dc15b3310f70df5c5740aebda00dcf31ea545",
+      "bytes": 3620283
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "a4024ea5f8ccfa321e6dd59608ec38b01e375d311e3bf033e1a60f35f302a79b",
+      "bytes": 2830
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3409\\best_model.pt": {
+      "sha256": "a078495441500ca7646dcd1c6954a296c72ed86d1ad67983867f21fa51c5e07f",
+      "bytes": 7501394
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3409\\scalers.json": {
+      "sha256": "a42f8a499393980015fb4ba013599e455ad935cbc7f97c7b95b2427b1905d95b",
+      "bytes": 6920
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v2_manual_fp32_candidate\\formal\\C_M2_N080_R00_S3409\\training_complete.json": {
+      "sha256": "6fc52a31c0aa8369c0d4263c94533b3798b3bcabad6fe7506db9fbe7f0dd87fd",
+      "bytes": 770
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3407\\run_config.json": {
+      "sha256": "cf7cd2e87572d3625710086d476444b910fafc4861b15c39efe2578bcaf0e2b9",
+      "bytes": 14927
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "956d8af51c772868f9e69ce32382c3b40774cf032de8e187785904d6c69e7cd9",
+      "bytes": 3621154
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "d89b4fe5daf771448e2640fc62cf2854e449e6ca6f0ea17b219e542c154585da",
+      "bytes": 6571
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3407\\best_model.pt": {
+      "sha256": "b2f24223734d28241ad3b47914516a800085bf53c2095fa071a8919ace247614",
+      "bytes": 7504924
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3407\\scalers.json": {
+      "sha256": "1f344131ae8994d78eb040000950527c7ed9e34276e530a1dd7df5f098053833",
+      "bytes": 7694
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3407\\training_complete.json": {
+      "sha256": "645fed80257d83578831c0e14d078b73aec52e846e24c6c8f5403549c06cf80e",
+      "bytes": 767
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\DatasetV2\\DataPipelineV2_11_refined_finite3d\\G4-AsymmetricRamp098\\run_4385143d4bed4c2c\\splits\\train_rep00_N100.txt": {
+      "sha256": "6da38da59d63f2f8ae28e5ecd65b64ecf41081915ce5129c36ab55230d74c24f",
+      "bytes": 1300
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3408\\run_config.json": {
+      "sha256": "e851106257c0a731b597f5a0ab8b4e4271cbc6248e96801def1cf6341a2695ff",
+      "bytes": 14927
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "423fd2557e94b957e8ddb65f71e54430307cbed268c8b7a8370ffc0df3b4ae7c",
+      "bytes": 3620964
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "b50f76a162e79f3c8e672603d1616d372717d431bd3ae625cb2eac988404160e",
+      "bytes": 6570
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3408\\best_model.pt": {
+      "sha256": "2f23c014d31f9354fa926b718332b10ea0bbe7c410d8179854658dc160885d19",
+      "bytes": 7502044
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3408\\scalers.json": {
+      "sha256": "1f344131ae8994d78eb040000950527c7ed9e34276e530a1dd7df5f098053833",
+      "bytes": 7694
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3408\\training_complete.json": {
+      "sha256": "874fadfc4de588418ff7b3dec7c74b92d1001cf9c451d314c2069f0dbb66c419",
+      "bytes": 766
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3409\\run_config.json": {
+      "sha256": "3de792c776a9d1cee0976b0a1d90389cb0ae60640c19aabeb3813fbc414e3665",
+      "bytes": 14927
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "edc7056cc01faeb46461ca81e4ee531e296604ad7f7b2b5939a98687bcb7714d",
+      "bytes": 3620857
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "7f4d8142638369fea228bbf408931f17d7bbf4eed82583d2315568bc8d924f2c",
+      "bytes": 6573
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3409\\best_model.pt": {
+      "sha256": "49637f2451c3d646945ae2cda6a2dbcaabe48a9a4a17fa51614fd3244f4109fd",
+      "bytes": 7504604
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3409\\scalers.json": {
+      "sha256": "1f344131ae8994d78eb040000950527c7ed9e34276e530a1dd7df5f098053833",
+      "bytes": 7694
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M0_N100_R00_S3409\\training_complete.json": {
+      "sha256": "ac8b3d954f5d376f8f9402a9dd28005658fd203a2a146c8e6c669a29a248e3ec",
+      "bytes": 769
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3407\\run_config.json": {
+      "sha256": "5cfd9948108f7496aac72f5123bc50bb3a76d6c3c7984eaaa49a344e719531a6",
+      "bytes": 14927
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "fa25332b240a5ffbce24861c39992280de1839d7efd975b49c085984b6be2ae8",
+      "bytes": 3618606
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "1a16b88a0c988b4da7703c85bc1f83832ea729d5df2dfa1dce873ae44a34602e",
+      "bytes": 6577
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3407\\best_model.pt": {
+      "sha256": "bdf181af1fcaa6822118650dc4485c475ad046b787f3f1dd7db6ed6663d76d24",
+      "bytes": 7505436
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3407\\scalers.json": {
+      "sha256": "739e4bbcf7f054338f9e05d43282aef2cda014e9307ab52b5b2b33e763d58c49",
+      "bytes": 7807
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3407\\training_complete.json": {
+      "sha256": "76d2c70de940b698757df03af6a926396e6b99c6e13b21f6c3f60d8261f28693",
+      "bytes": 774
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3408\\run_config.json": {
+      "sha256": "027a977dd4b7d9612779cdf9cdee95b015ff3ee80940bfa210866bc5b778a219",
+      "bytes": 14927
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "4ac722fd41cb0fabc4e5f313749f9ffa287cdd2dcad574fb2b2fa95ec41e1ef3",
+      "bytes": 3618826
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "c1101650ca292044be0884033f2811bb6dc002171ec4bad2ebf7015ab5691bca",
+      "bytes": 6573
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3408\\best_model.pt": {
+      "sha256": "2e678b7da6c5e638c966fb73981b4d1ffbced1a842d31f6331ebe199adfaf75c",
+      "bytes": 7498332
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3408\\scalers.json": {
+      "sha256": "739e4bbcf7f054338f9e05d43282aef2cda014e9307ab52b5b2b33e763d58c49",
+      "bytes": 7807
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3408\\training_complete.json": {
+      "sha256": "addd8e0c0dc29f810699a536d62c69dc18f3f9a85a02747e4b1045f9bd2cfd1d",
+      "bytes": 770
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3409\\run_config.json": {
+      "sha256": "762427d0480f3ea917a38d574d142201726e04b511dc165560ac982e800ebe97",
+      "bytes": 14927
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "f36908bd33215f182d0e13ddc19ce785a10db083c4529ed653766002dd2a586b",
+      "bytes": 3618783
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "9892f344c9ad83fd059d7abbf8a54c5f9b87b799f7797d7f677d402a510c34f0",
+      "bytes": 6575
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3409\\best_model.pt": {
+      "sha256": "b1c928a144e81b010cfd5653f17d1a4440bb3a416826d67b8486b3b44b5ed515",
+      "bytes": 7502172
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3409\\scalers.json": {
+      "sha256": "739e4bbcf7f054338f9e05d43282aef2cda014e9307ab52b5b2b33e763d58c49",
+      "bytes": 7807
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M1_N100_R00_S3409\\training_complete.json": {
+      "sha256": "a820a46004932565689a823f941facc832713cb142170cb51f0c1cdc3112e976",
+      "bytes": 771
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3407\\run_config.json": {
+      "sha256": "a22ce9439a1b2ce03644b5b5015d770b25094e978d2bacd8cfcb8d4b481e2863",
+      "bytes": 14927
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3407\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "1be54297c46d8e17cb91c383af2f143eb3712cf74fabe3b71ea3cbc26b9f8351",
+      "bytes": 3620290
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3407\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "f4cd7ae73f36670f0b0c715dfc892c833f46abbc4f9e7d5ec6592d89a8978659",
+      "bytes": 6575
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3407\\best_model.pt": {
+      "sha256": "2a67a495c16a6d11a9bd830284a898b1e328ae58e66dde89648b05d2f9f1f16c",
+      "bytes": 7508434
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3407\\scalers.json": {
+      "sha256": "ecc0a6c6cb2b95bb6b6678a4b936a4a2c4f58df1511901e3c496f97e866c1baf",
+      "bytes": 7992
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3407\\training_complete.json": {
+      "sha256": "afc556fe235dc2431be48581c0306327b31d5f80e51b986a29d1e2602e424892",
+      "bytes": 770
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3408\\run_config.json": {
+      "sha256": "fcec01f453fa2764b0560af6f65634ccc1667aa5039fd749a50cb3db6cfe5798",
+      "bytes": 14927
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3408\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "ce0a9a14f4aa5417420b572498a66635d99e5b7e4ec3c9bb88b60185378f54ad",
+      "bytes": 3620202
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3408\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "019024d0ae5342e9c6c0af0b03d2bab905e9a7b83d6801ab2e185c5a8599a49e",
+      "bytes": 6574
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3408\\best_model.pt": {
+      "sha256": "cabe7e09fd1d0bd162c31977654e6855a51c04897ae9b3ea459f45c3b18e9562",
+      "bytes": 7507666
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3408\\scalers.json": {
+      "sha256": "ecc0a6c6cb2b95bb6b6678a4b936a4a2c4f58df1511901e3c496f97e866c1baf",
+      "bytes": 7992
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3408\\training_complete.json": {
+      "sha256": "3f6375d504567c69c2cfab6c17a40484367965f82b37538a68e835e78f75f242",
+      "bytes": 770
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3409\\run_config.json": {
+      "sha256": "3a8c7ecf2a4304e51138373932715fc4d2c3a650d0f3f853f1ace1155dc7a831",
+      "bytes": 14927
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3409\\plots\\validation\\validation_predictions.npz": {
+      "sha256": "bb1c527f96a4d1d66c016960754968e2a85ad35dcc6ae673f6a34e17c179f28c",
+      "bytes": 3620248
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3409\\plots\\validation\\prediction_provenance.json": {
+      "sha256": "54b36b14545b7425e0d7211f1ba776e830e96f6cabbd3d3503cc0dedcd9e58d5",
+      "bytes": 6576
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3409\\best_model.pt": {
+      "sha256": "b52a20c6bdbd26c72f688dfbf98b49292bf0d25aaf8cadeb214c659283fe8395",
+      "bytes": 7501714
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3409\\scalers.json": {
+      "sha256": "ecc0a6c6cb2b95bb6b6678a4b936a4a2c4f58df1511901e3c496f97e866c1baf",
+      "bytes": 7992
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\08_Refined3D_Study\\manual_runs\\v3_N010_N100_fp32\\formal\\C_M2_N100_R00_S3409\\training_complete.json": {
+      "sha256": "9e2303f540162bc1d25958da761884efb6ebb2465553b9c70569ec23c8d6cbe5",
+      "bytes": 772
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3407\\run_config.json": {
+      "sha256": "6149d239e86eb8c78c1a3d4e827752d8ab43fda9c8baa0144c322caa6ecaf1c6",
+      "bytes": 12495
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3407\\training_complete.json": {
+      "sha256": "12a8e1a6dd5a3863d1c7c3d5becd94190d309b9884c5d15d69b10dd9686739ac",
+      "bytes": 1469
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "c7043d4d66dd1dd2939fd386d9ec52eaddaad202d9546e9dcbc6e6b11c6aefc9",
+      "bytes": 3333
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3407\\best_model.pt": {
+      "sha256": "ac6719bdd3f7f9e9eaa4272b66414945af6b7dcba7b5568179c2e97da2efab32",
+      "bytes": 238949
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3408\\run_config.json": {
+      "sha256": "53b444112e5edbe559efb841f01f9eba0927ae5c2568e3e7ef8dcedeef131879",
+      "bytes": 12495
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3408\\training_complete.json": {
+      "sha256": "68426c9910ae09f64ced5440372d90cd20c47c0e08fa3d89944ea8540af0d924",
+      "bytes": 1469
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "4aa89e41b0b1d24d77bf62ed62bd281eeea6232287bc31f4fce4603d11e64e4c",
+      "bytes": 3328
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3408\\best_model.pt": {
+      "sha256": "c044d7564ed9188279bf610228b4ef0415724215b96e0cf25aee2acbdb05381b",
+      "bytes": 259557
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3409\\run_config.json": {
+      "sha256": "5e9b0caa0aa2e2877b720916c89eab2dd9290d15751873a8259534c3c40256b5",
+      "bytes": 12495
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3409\\training_complete.json": {
+      "sha256": "dcb5272318e1524a73bb5e57434f75ecfa067a076c9d80ce95c96993005bf366",
+      "bytes": 1469
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "9073f2383847ff7b0eb2a71ed1d8c0252285e36794c745c1a58136ea325b67eb",
+      "bytes": 3323
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N010_R00_S3409\\best_model.pt": {
+      "sha256": "5d106d77fb804c9dea1c33bfa4183e3cc84ddfcf856ae39f4b6397ce5294a7cc",
+      "bytes": 229477
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3407\\run_config.json": {
+      "sha256": "66f331e08de1bebe95900be145716a484389ce12b33f490d4dfdf8f6daad0c74",
+      "bytes": 12495
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3407\\training_complete.json": {
+      "sha256": "69aa4ed91945e1cfb16b1fe40cccea231433c41bc03f019129e6758321bd9de1",
+      "bytes": 1474
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "66614fe6d0035310fc6a84a730931a11b3fb1930a59f40bdae1cd8cb04a142fb",
+      "bytes": 3324
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3407\\best_model.pt": {
+      "sha256": "1a0fd2c8105155ddfcb760b1b791d07e2e1e20e74adb36b38d086ff6ef42ace7",
+      "bytes": 222565
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3408\\run_config.json": {
+      "sha256": "d914fec04d578e6dd4535bdff073fbb7b8ff5a034a215bd2b688d615efa79e21",
+      "bytes": 12495
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3408\\training_complete.json": {
+      "sha256": "e5b8d3a748637cff49320fb3f0793db16287445f34b6e1f35b27d07a054cdfa2",
+      "bytes": 1467
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "6abc96f1285f436a3b8ca753929c965d4de89ce6619c2833f1a4723315c6e04b",
+      "bytes": 3331
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3408\\best_model.pt": {
+      "sha256": "8a5161cef7152158a8132f406326a92fbf6a09a96f51fc5ed017d95e60b099c8",
+      "bytes": 243173
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3409\\run_config.json": {
+      "sha256": "40d81e16b6f91c714eb0741ccff3ca9a89956d4a40fd359b0fcff4423ccb59fc",
+      "bytes": 12495
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3409\\training_complete.json": {
+      "sha256": "3ab79cb9bd31567bf610ad4b00b3cffe36206f1ebfaef93110fb9f1440fe9b6c",
+      "bytes": 1475
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "04afd2451f1e056527e2daa9c87f1d578d05adb1a32168d17e5c77771bbb8211",
+      "bytes": 3343
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N010_R00_S3409\\best_model.pt": {
+      "sha256": "32862bda17da23492b7aa7600e381a955a16982e0a6cb0c2b66ba11bd1d4d7e7",
+      "bytes": 229157
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3407\\run_config.json": {
+      "sha256": "80a0b113b1582a24170c175309373fedf1d5889d08a6b3058b96fec0b926b561",
+      "bytes": 12495
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3407\\training_complete.json": {
+      "sha256": "965361bca8d4cf291347a0cc46c9a8d6011678774f5b2b2e7b18267fec898318",
+      "bytes": 1469
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "06b49cd8f1756fa2250e94883b5132ee88a9d029f6e4fa11388b3a675997ece0",
+      "bytes": 3333
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3407\\best_model.pt": {
+      "sha256": "bc90731deaaa875cb6ab62967c60ff1dcaae2af3a2cba70232353b27d5246554",
+      "bytes": 245477
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3408\\run_config.json": {
+      "sha256": "e60dca2c7ba739d70ad7a92648dcad7477ddc2026ac33a0d95ccedd1131ff500",
+      "bytes": 12495
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3408\\training_complete.json": {
+      "sha256": "677475fe3e68a207f417811e3f26984f6cbb5da24139998eb9d2f8a7624e69c7",
+      "bytes": 1470
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "e1f736ab6f0d9813b07e8f7d6a2ad7907c484a1db62b2cb90e05d081acde1847",
+      "bytes": 3334
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3408\\best_model.pt": {
+      "sha256": "74377a7ac5686a2424eff1c7b5a3f9670c7a435b3871ada2f8fe0e67fb672752",
+      "bytes": 243173
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3409\\run_config.json": {
+      "sha256": "04d6fffcc4fd783503710df8a7de6f578d600f44d32ad4c678b5bc25d483a3c6",
+      "bytes": 12495
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3409\\training_complete.json": {
+      "sha256": "1a5f3d6b63cbdc805e2bb194d7b640e7a0c484615de8abadaeaadb000c7d2e5a",
+      "bytes": 1467
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "0ef773bf57410839cef4e5e6f76b2e5e8bab90aedcbab3c08542c0e1bd82abe6",
+      "bytes": 3336
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N010_R00_S3409\\best_model.pt": {
+      "sha256": "6c8e6d54e06f8af0b64e538402a376039f47e2d5df9b9619a6664eefdc07dfbb",
+      "bytes": 229797
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3407\\run_config.json": {
+      "sha256": "54460177e6b1fb79700b779bc2c19fd00f75a42ccb40cd0bbdddc0da2490b495",
+      "bytes": 5266
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3407\\training_complete.json": {
+      "sha256": "d1a3c05080d444d7a8517bfde4006b9fb6a1a3ad10c2b848319ac7b3271b125c",
+      "bytes": 1476
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "2b3f491e26816b69fd5865b47ce641804a32d74d79d2b12f486e4f89729b0851",
+      "bytes": 3343
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3407\\best_model.pt": {
+      "sha256": "61e739fd07024c3e0560a695067b19cff9c20bdc836b848b93d5fc6adc836e22",
+      "bytes": 312805
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3408\\run_config.json": {
+      "sha256": "61cdc7c90dcfb4df43b626dc79d99fae92e8592e51568fffd23ab6d64837d6f8",
+      "bytes": 5266
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3408\\training_complete.json": {
+      "sha256": "2c6a5930b7ad9d1f8f5f61413bead129cb1f22fb9c6559a933969c7cfab8ea25",
+      "bytes": 1470
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "c94c317967f826b2c352716222977b9143d7ef64d9203c779501f9f692509cda",
+      "bytes": 3323
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3408\\best_model.pt": {
+      "sha256": "c213089b7ab4b279594c3831630781b92ca4f56e2cf5fe339481d97dbb54a5a4",
+      "bytes": 247973
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3409\\run_config.json": {
+      "sha256": "15330f386b33eacde91d43ba2275eec4d6b2218785cb16ec583dda410e1d5bd1",
+      "bytes": 5266
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3409\\training_complete.json": {
+      "sha256": "5ecb668846bb2ad49c157b8d97f3dec00d9727d5dbaddbe5a02af133b830cc70",
+      "bytes": 1474
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "5e6571f948ca15ea1fd8c5f5c0447d094c4013eda1325feb6efa27b019903674",
+      "bytes": 3323
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N020_R00_S3409\\best_model.pt": {
+      "sha256": "b87760549298d2980f7ef1203e0ea994501d4a0b0e4a7ac6661e331ff95d9216",
+      "bytes": 223525
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3407\\run_config.json": {
+      "sha256": "4a8841749a038de34160e6d9cc0d85147c52cb4f209b322128bce82c85711a7b",
+      "bytes": 5266
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3407\\training_complete.json": {
+      "sha256": "72af3505c40712d59628ab36c38a3f8e6d58a1ca32306a919aca34a2cd394ab5",
+      "bytes": 1476
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "bde160ef651fb2e5b01002941c5374325a1e0e6e713b48ae6eee469e95b55eb0",
+      "bytes": 3333
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3407\\best_model.pt": {
+      "sha256": "bed55a51885c7a4cc3ce04e237c53c22c2f4f91f80229e69b620cd627e5310bd",
+      "bytes": 296101
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3408\\run_config.json": {
+      "sha256": "31ee2c0b52b9594d4da7ee6600b13164a25885c1c26c318068dab9c9b60f6969",
+      "bytes": 5266
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3408\\training_complete.json": {
+      "sha256": "391bdc3af3d058352b02b829906ca63eecb4754467c6f81980c07f5fbc03f7f5",
+      "bytes": 1473
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "c724c7bc4ac4af40a8a99e51d64ead05e1afb940a4d749e2303f720ecd1d3227",
+      "bytes": 3329
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3408\\best_model.pt": {
+      "sha256": "20b0acdbf7766cccd061f2e8c61f664bd7b863433e6c2b1fc21219a44736e859",
+      "bytes": 263717
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3409\\run_config.json": {
+      "sha256": "3122448dae97ea3a6f88a31e82707b0eb42a5d44cc3bf2e2e64f622fc81da508",
+      "bytes": 5266
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3409\\training_complete.json": {
+      "sha256": "a98a8fbbb258ae06f5ff1208bba928ae0e518f69368734f9200d2e48e0cddcdd",
+      "bytes": 1473
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "c12e5148eb28b56415a2a01fcb73a2b018cc76dd27c11c5338a1d200935ee2bc",
+      "bytes": 3322
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N020_R00_S3409\\best_model.pt": {
+      "sha256": "e419e9320a86f781bef38f98887a0bd8e18db4091ed960a85fb57c03e461b86a",
+      "bytes": 287013
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3407\\run_config.json": {
+      "sha256": "f7b7ca6cf56ea1e547c8986ae892141782efccaa2d38c5097a77ddd548742937",
+      "bytes": 5266
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3407\\training_complete.json": {
+      "sha256": "0dcb19dca5e81c7542be2ef9b6c6404a10e3159a6ec7013502802cf4d48f5dff",
+      "bytes": 1475
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "9f71c35ceff477f05ba8ade782472f788a5df5ffaa7fbbb8515bdc7a36da9aa1",
+      "bytes": 3331
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3407\\best_model.pt": {
+      "sha256": "47feefc49af011d4d2339352cbb50b99055e7a0e94f8506718f7e543fa75c0ca",
+      "bytes": 284581
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3408\\run_config.json": {
+      "sha256": "9061cbae5718b1f30fedff126fe902a565d427e573b0ee521c19dd10646b5985",
+      "bytes": 5266
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3408\\training_complete.json": {
+      "sha256": "a36e06c239bf098eeabdd2dd31a9fb582e49de4e9fb643cd739f08fdb939df93",
+      "bytes": 1480
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "5fa2b25de608689628ef5e3565a8d1f1d05161ef83020c4d0bdea4b9b6212b1a",
+      "bytes": 3342
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3408\\best_model.pt": {
+      "sha256": "369693602d58ad8af35e772fa9406ceccc46856d6b3427acad6bee179c8d126d",
+      "bytes": 263013
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3409\\run_config.json": {
+      "sha256": "6d89c528491df0581c1880c24c64d51b177d7da8a4186bbcfc241b0e06ca5434",
+      "bytes": 5266
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3409\\training_complete.json": {
+      "sha256": "6182cade70eed4b263d54b37cb9d89937c3bfeda4747ef3b9f193a9762d255d2",
+      "bytes": 1476
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "4db21da0fdc5645622b304581d99448432007d6020d6fc37bfc5651667269cb8",
+      "bytes": 3333
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N020_R00_S3409\\best_model.pt": {
+      "sha256": "18df6ca06b1b256f0e9360e2f89b888b40b3c754972c5c00ef3540a258038781",
+      "bytes": 264357
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3407\\run_config.json": {
+      "sha256": "b1b1b0eb63c3f0c6bf5c661718e94bef67633810fd16f342f38e5ef29bbff828",
+      "bytes": 5896
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3407\\training_complete.json": {
+      "sha256": "c372e7ce7bc99a8acce51acb615f83965b6b42b536ef8bf03a6b6af0220212e8",
+      "bytes": 1480
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "9b2f25966bc75d9224fcc373a7e7057a765cb5bdc8de7a5409ddc8ffebee37e4",
+      "bytes": 3339
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3407\\best_model.pt": {
+      "sha256": "5bc0cf7c6a2e2a1ae9fc06b0489fa1a897eefda4591a71875e46976e704e51db",
+      "bytes": 253029
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3408\\run_config.json": {
+      "sha256": "cbceb214dd7c422623dd4cc4a70be5ad6725f1a4f37539ceb88424eec37bda46",
+      "bytes": 5896
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3408\\training_complete.json": {
+      "sha256": "7d461ae9eea99a12e02d6befe49ac8943b9e0d24aa3dd0e1bee43cbf31c69eea",
+      "bytes": 1478
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "1beed8f31e17afe72218a186ff6654f9369350f3512c104f5dfabd1d0fc1ca6b",
+      "bytes": 3323
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3408\\best_model.pt": {
+      "sha256": "8c55d1394eb00622e14f690df16a253ac62fb50227bc2271663ac6c403ce4004",
+      "bytes": 271653
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3409\\run_config.json": {
+      "sha256": "28aa481c7599391aa69033cc4cf657d4fdcc301c3e99d7f0c28763378e303397",
+      "bytes": 5896
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3409\\training_complete.json": {
+      "sha256": "ab470c78e5fead867c726a21c3bd00f953355dfc2927b860863172e433eb8ac3",
+      "bytes": 1470
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "b25862fc39ee6a5992e399b584021882c442e59f6b7b5f4a5c1888f71327a1cc",
+      "bytes": 3334
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M0_N050_R00_S3409\\best_model.pt": {
+      "sha256": "9639e0cfd94090a3ae74b9f719c72642aeab06e0395e59687192f6c84d2d2a55",
+      "bytes": 264485
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3407\\run_config.json": {
+      "sha256": "db66d11069e3817bdd125e88c12148061ba2ad8041ffb43660d6549eb2880c19",
+      "bytes": 5896
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3407\\training_complete.json": {
+      "sha256": "60250e56e5f09b74c51b15a6451079b534f7cd3389c8ff37ffeb68e9cb3e0341",
+      "bytes": 1480
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "c1aa6d03beb7cb681ee9bfaa63b5d33abebda66f45ac1b33796f06c8c9b9da80",
+      "bytes": 3324
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3407\\best_model.pt": {
+      "sha256": "3d71918a33920242a170266d26855d3f645221dbc0bfd7c8ff3f43c6b00bd07f",
+      "bytes": 261221
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3408\\run_config.json": {
+      "sha256": "c5c6ffd38f53b6d6ffb45d44494f4844794c4eef2b74d4f1227ab675a11d7efa",
+      "bytes": 5896
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3408\\training_complete.json": {
+      "sha256": "165288f3552a66c20664e8bce91e1e2bf803f3c970085fd3a959e5bc05fe08bd",
+      "bytes": 1480
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "ce9aa3069695055e081814a34349020ed39df23ac50074b27f0627d5e48af2c5",
+      "bytes": 3341
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3408\\best_model.pt": {
+      "sha256": "60ea8118a41cb3913f4375a0b1af0f92b57337ed540aac90289f4277083326d1",
+      "bytes": 270693
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3409\\run_config.json": {
+      "sha256": "6a5db857972323c60dda975856fbb7fff787ac539f95a613c8cb7c18bde15029",
+      "bytes": 5896
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3409\\training_complete.json": {
+      "sha256": "9abb000fecccde68f5321beaca39a7702406e30c024533d3b067c43ffa37eb58",
+      "bytes": 1476
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "084054b662bdbe31f63f04740a912abc528292f4cea440ee3645a1faec67c2d1",
+      "bytes": 3330
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M1_N050_R00_S3409\\best_model.pt": {
+      "sha256": "95ade1ede7164b228cb987a98299e27d1558daa829450836aee6592d263becff",
+      "bytes": 269413
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3407\\run_config.json": {
+      "sha256": "692731934f14abbbcd220bb6c44ce8e2ab1f84e0e9278ed8e01683b9fde17d2a",
+      "bytes": 5896
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3407\\training_complete.json": {
+      "sha256": "2807757532e9d17c395cb2ce975318b8d64127a36bf4f9088ecc1c0ad1776ddc",
+      "bytes": 1479
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "46b2a0a97b6fd5d4e07f6d573470d6a713b90da969378f0505140261c1d16939",
+      "bytes": 3322
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3407\\best_model.pt": {
+      "sha256": "bbf8e7ea595a6a376919f4aeac8240da6861966b72a785c82dc03351d15b08f1",
+      "bytes": 265765
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3408\\run_config.json": {
+      "sha256": "53b74d9c18b26d747e94dc6fbfa7df057a3f376b6b605c90f20b270684eef27b",
+      "bytes": 5896
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3408\\training_complete.json": {
+      "sha256": "8c031850353f5b95309e26141ff1548eca3d014df62174d70f13f2fc3205ced6",
+      "bytes": 1478
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "4576d7e56d264badaf402cf79fffd58f2ce3920c145a2a68fd497c087647d283",
+      "bytes": 3318
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3408\\best_model.pt": {
+      "sha256": "3348f058da5df07b76791c952dfc316b9eca5edce250a3aecc7d47efceeda49e",
+      "bytes": 303781
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3409\\run_config.json": {
+      "sha256": "fe6d833bb382e8ecd3c447371ae1666ee6884e5ceaaeb8395b9ba91e6d5c5c09",
+      "bytes": 5896
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3409\\training_complete.json": {
+      "sha256": "86b6b16d1d63902c6e4d3c3814b75003701406d81962c6668d32968720041786",
+      "bytes": 1482
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "ae577e9e1fd9f45c5322e79cd6563085fe57e2a071443d842eb958db1736dee8",
+      "bytes": 3329
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v1_frozen_cp_force_head_fp32\\formal\\C_M2_N050_R00_S3409\\best_model.pt": {
+      "sha256": "6db75ab179e4ba9889caaaad811fc123ddfc8e836b79da1b6ba3c4b9b7347995",
+      "bytes": 336933
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3407\\run_config.json": {
+      "sha256": "36244397c9c97fffc3cc67cb7b62a2031de0c1d11c9f1ac29d5041b21be05856",
+      "bytes": 14386
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3407\\training_complete.json": {
+      "sha256": "132d38a904f379e5de775142958aa852790287ff14b2a96f72c3805e85b5ed7f",
+      "bytes": 1483
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "5515b04808a808783399a42b2e426444a4d2b0a6b86f0cd140ac200a6483f932",
+      "bytes": 3335
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3407\\best_model.pt": {
+      "sha256": "0e4a00ea2342f0740aa74b251642e5e020ee6a44a30ed8bb94fae0d92954b65e",
+      "bytes": 291621
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3408\\run_config.json": {
+      "sha256": "2638e3000d68e2890c386eff499487e681ccefb652aecf3f07512dce60bc32d3",
+      "bytes": 14386
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3408\\training_complete.json": {
+      "sha256": "2eb00058efc60c6d6bfedcc98a4db969ffa3250441d179aed91a0be48ed1e3a3",
+      "bytes": 1476
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "374390d093ac2e4b13b1423da8f4d4068295d03be2bd3ae16284c0c25a5588d7",
+      "bytes": 3332
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3408\\best_model.pt": {
+      "sha256": "1fc2dca7fb8ecb6fedc06c6738feeebd4be3950452569001d5edca8ba93ee89b",
+      "bytes": 280165
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3409\\run_config.json": {
+      "sha256": "1904a1fab1954afede102e876db39361eead1e2c58bd1cd53932a65e45826f6a",
+      "bytes": 14386
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3409\\training_complete.json": {
+      "sha256": "964c53f092f87f765dda73a6ffbf2ef6b95916fe8e91352c96743f73956c18fa",
+      "bytes": 1481
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "ca02cd23b4277a58c367eea674fefef55a515db4c0635355134a4ea9e21e1841",
+      "bytes": 3333
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M0_N100_R00_S3409\\best_model.pt": {
+      "sha256": "8858a20b1ded403ec10c6ef863aa6d12027ec41f6bb52c67a91777c3a80b2e1f",
+      "bytes": 278565
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3407\\run_config.json": {
+      "sha256": "5e3b8ab73626ac8ad4cc106a36d5ad48c4971dbf0cbc44070dc70899af90cce7",
+      "bytes": 14386
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3407\\training_complete.json": {
+      "sha256": "4deef2834e2f27b3f0a65c0e4845714f1789034f3c943d3e1e02ecdd5e0e4df8",
+      "bytes": 1479
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "00efedc2b98bf15aa3932212f03fc53ec50f7ff910830b3efbfba6f55f903f1e",
+      "bytes": 3337
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3407\\best_model.pt": {
+      "sha256": "552b4ce0681621344a3b154cf26c6b295cb27babcbf00651932499ca1eb77b79",
+      "bytes": 292581
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3408\\run_config.json": {
+      "sha256": "31ede359c23ac7c1ab5d260eb37f4b44ac7d69a09d2a23faa3fa1a6dd114dedf",
+      "bytes": 14386
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3408\\training_complete.json": {
+      "sha256": "21e9d89797da062953002b6efe20707fe44a11faedf75673130c1a647ad93464",
+      "bytes": 1482
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "e56801fd46bb39f644d812c28c9ecf4d658719bdbee92ddc49a13d7d3817af03",
+      "bytes": 3335
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3408\\best_model.pt": {
+      "sha256": "ea5a86737fc1d714ed0e1fe89500f096287d461c2196568451595efbcd927454",
+      "bytes": 293285
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3409\\run_config.json": {
+      "sha256": "b47a00e07fe4d8f81119aa6eac48deda2fd5e6c8d6a0f80d9248e3b0b70be6d0",
+      "bytes": 14386
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3409\\training_complete.json": {
+      "sha256": "cabfbb97163725ba0e24bd2b3b97d7e2a40b54717a3b6f24535702d38c1d1ed4",
+      "bytes": 1482
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "9d0c303d0be887e11a4af047b2498ec95478a6dd21d4047bcf80b30a1d35a270",
+      "bytes": 3341
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M1_N100_R00_S3409\\best_model.pt": {
+      "sha256": "5f187816da76ffecb66e141948f6d38c89ddd8d36c20178afd12da4d273175c6",
+      "bytes": 278565
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3407\\run_config.json": {
+      "sha256": "840d472e1d25193f0c8743d56c32af77541ac989ce8d2f71776245db798dea49",
+      "bytes": 14386
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3407\\training_complete.json": {
+      "sha256": "e2393f326f99adeb3db516db47cf9331a353cef41ff8c8f2c4be660ed487d695",
+      "bytes": 1482
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3407\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "ec365e2dfa92b6b530381713819f03dc2924f17c1ea18c083524d9bfc2cc4080",
+      "bytes": 3338
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3407\\best_model.pt": {
+      "sha256": "116a3384d7a5406b39c067d12491e5bf04d5bff83efd14558573058ce558fdb0",
+      "bytes": 292581
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3408\\run_config.json": {
+      "sha256": "8e5f5aba29f7cfec02af386c8de216bf41636e9b4c273389fd4ca8cb8651ba2e",
+      "bytes": 14386
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3408\\training_complete.json": {
+      "sha256": "455e70ae056262449a72c1e9819190282940ab66d6e8eee0b4aa562400a74ce7",
+      "bytes": 1478
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3408\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "5676ee52cf408f3d0b3cd3212d23d58396b38fd20b611c6117c401a6157821e4",
+      "bytes": 3341
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3408\\best_model.pt": {
+      "sha256": "de470345243a363ed2ed6e6ba7a621eeac9483fa205de42724cf4debe4969937",
+      "bytes": 280165
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3409\\run_config.json": {
+      "sha256": "d6f7037e7751bc462357662e98371a1d53390117d2aa789c1ee8690302aeb493",
+      "bytes": 14386
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3409\\training_complete.json": {
+      "sha256": "bfbebcbaf04a12320baf0f9c23a90122205ce5ca9b89cf000a9a0304a444ed80",
+      "bytes": 1477
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3409\\predictions\\validation\\validation_predictions.npz": {
+      "sha256": "3412b4400bd7cc423e4add7829f9a62e8ab6c061ae10f5173ef4a2ad0069610e",
+      "bytes": 3324
+    },
+    "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\09_ForceFromCp\\v2_N010_N100_fp32\\formal\\C_M2_N100_R00_S3409\\best_model.pt": {
+      "sha256": "aaca137c544966a60d0e1df6c4a0623ad85228b4fa6d49d62bdccb3525a46b2c",
+      "bytes": 272037
+    }
+  },
+  "settings": {
+    "version": "chapter5_new_budget_v1",
+    "split": "validation",
+    "cp_version": "v2_manual_fp32_candidate",
+    "force_version": "v1_frozen_cp_force_head_fp32",
+    "cp_versions_by_n": {
+      "10": "v3_N010_N100_fp32",
+      "20": "v2_manual_fp32_candidate",
+      "30": "v2_manual_fp32_candidate",
+      "40": "v2_manual_fp32_candidate",
+      "50": "v2_manual_fp32_candidate",
+      "80": "v2_manual_fp32_candidate",
+      "100": "v3_N010_N100_fp32"
+    },
+    "force_versions_by_n": {
+      "10": "v2_N010_N100_fp32",
+      "20": "v1_frozen_cp_force_head_fp32",
+      "50": "v1_frozen_cp_force_head_fp32",
+      "100": "v2_N010_N100_fp32"
+    },
+    "all_cp_n": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      80,
+      100
+    ],
+    "force_n": [
+      10,
+      20,
+      50,
+      100
+    ],
+    "force_detail_n": 100,
+    "primary_n": [
+      10,
+      20,
+      100
+    ],
+    "spanwise_n": [
+      10,
+      20,
+      100
+    ],
+    "regional_n": [
+      10,
+      20,
+      50,
+      100
+    ],
+    "seeds": [
+      3407,
+      3408,
+      3409
+    ],
+    "saved_validation_only": true,
+    "select_examples": false,
+    "reference_n": 20,
+    "region_eta_source": "prediction_npz",
+    "precise_region_annotations": true,
+    "chapter5": true,
+    "double_column_inches": 7.0,
+    "font_family": "Times New Roman",
+    "font_size": 9,
+    "minimum_font_size": 8,
+    "png_dpi": 600,
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ]
+  }
+}

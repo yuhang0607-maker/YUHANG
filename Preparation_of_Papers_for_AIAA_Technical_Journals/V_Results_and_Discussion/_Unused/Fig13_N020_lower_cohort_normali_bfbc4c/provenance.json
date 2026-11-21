@@ -1,0 +1,30 @@
+{
+  "figure": "Fig13_N020_lower_cohort_normalized_local",
+  "split": "validation",
+  "validation_wings": 41,
+  "N_values": [
+    20
+  ],
+  "seeds": [
+    3407,
+    3408,
+    3409
+  ],
+  "reuse": "Exact image, source-data and caption copy; no re-render or recomputation",
+  "original_provenance": "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\11_PaperFigures\\chapter5_round2\\validation\\run_20261026_102826_215214\\figures\\Fig13_N020_lower_cohort_normalized_local\\provenance.json",
+  "original_provenance_sha256": "97885b750ee4dfcec118a309bf8471f65391856399dfff76d46549c9ff4e538d",
+  "copied_file_sha256": {
+    "Fig13_N020_lower_cohort_normalized_local.png": "d4865857e659edfa8e73cd1459e79a74b7da9fd5c7d3a50262bae0798031453b",
+    "Fig13_N020_lower_cohort_normalized_local.pdf": "155268c824336292b879785397b2bcc4f7eec7cdd875d72e35eb2d30b77f2473",
+    "Fig13_N020_lower_cohort_normalized_local.svg": "dc4a79ab888114dfa72848d365d3e2b74e24c2fdd58894e1e5a147d4b8ea203b",
+    "source_data.csv": "cacd2f82265398c2a69ce61ae4d1961c478409c0158e51f05c8f2bf3602f56bc",
+    "caption.txt": "42347e0e6559e8577b3284614363138bf563e23d761a75ba78088d881a02c88b"
+  },
+  "size_inches": [
+    7.0,
+    4.45
+  ],
+  "caption": "Mode B nodewise Cp validation RMSE and paired changes, N=20, lower surface; all 41 validation wings and three matched training seeds. The upper row shows M0/M1/M2 on one common sequential scale; the lower row shows M1−M0/M2−M1 on one symmetric zero-centered scale. Negative blue is improvement, positive red degradation. Both coordinates are dimensionless. Limits use complete pooled valid-node extrema within this N and surface, unless a manual override is recorded. Different surfaces and training budgets may have different limits: do not compare their colors as absolute values. All scientific fields are copied from the saved statistics, without RMSE recomputation, resampling, smoothing or valid-mask changes.\n",
+  "statistical_unit": "See unchanged figure caption",
+  "test_evaluated": false
+}

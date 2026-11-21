@@ -1,0 +1,30 @@
+{
+  "figure": "Fig07_root_tip_cp_ablation",
+  "split": "validation",
+  "validation_wings": 41,
+  "N_values": [
+    20
+  ],
+  "seeds": [
+    3407,
+    3408,
+    3409
+  ],
+  "reuse": "Exact image, source-data and caption copy; no re-render or recomputation",
+  "original_provenance": "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\11_PaperFigures\\chapter5_v1\\validation\\run_20261024_145024_430054\\figures\\Fig07_root_tip_cp_ablation\\provenance.json",
+  "original_provenance_sha256": "006fb346178a4b2e660e9e6bd5e5eac2459475bf67c259854bf1553de9664c59",
+  "copied_file_sha256": {
+    "Fig07_root_tip_cp_ablation.png": "77cb26554146eb0b6489b4630a95c79091e2583884fed799e4d713fecee673f8",
+    "Fig07_root_tip_cp_ablation.pdf": "933f4b1f465b97497eeb2d46d2f7cc4f797243e717db4655327f8077d5d111c7",
+    "Fig07_root_tip_cp_ablation.svg": "f78ebcb00050b65ad4daba6d53abef33366674fdffece8c6e139060d110ab036",
+    "source_data.csv": "bb18d081fe303d0b8cb6ff2cb8a24f3be39af91a2a4b8ece4d6d6de140362821",
+    "caption.txt": "01ab0bba229a1e3b4ad53f823f84653c613d7cbefc1ea4b25ab3ddf61e49950e"
+  },
+  "size_inches": [
+    7.0,
+    4.7
+  ],
+  "caption": "Regional validation pressure errors for L1, L1 plus root, L1 plus tip, and complete knowledge configurations at twenty training wings; points denote individual seeds and error bars their sample SD.\n",
+  "statistical_unit": "See unchanged figure caption",
+  "test_evaluated": false
+}

@@ -1,0 +1,28 @@
+{
+  "figure": "Fig06_caseA_Cp_sections",
+  "split": "validation",
+  "validation_wings": 41,
+  "N_values": [
+    20
+  ],
+  "seeds": [
+    3407
+  ],
+  "reuse": "Exact image, source-data and caption copy; no re-render or recomputation",
+  "original_provenance": "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\11_PaperFigures\\chapter5_round2\\validation\\run_20261026_102826_215214\\figures\\Fig06_caseA_Cp_sections\\provenance.json",
+  "original_provenance_sha256": "5d06232c165fc2c0432a45a68b6337b438a101385d12f5632a2d226a3ad9cb16",
+  "copied_file_sha256": {
+    "Fig06_caseA_Cp_sections.png": "cc0206c9fba5892c3ca351ea9d6baa777f4991047a8f3f5fef5ec91d80938be7",
+    "Fig06_caseA_Cp_sections.pdf": "83d0a987376fed631b276c8253ea9e464fe8ece485a43400b010d7dec6b1e738",
+    "Fig06_caseA_Cp_sections.svg": "fc5d2a1f8b2fb17831cac6732000b5e94dbd8545f3673616b0c8b4af3a659428",
+    "source_data.csv": "d142b9570a61244f847e6d8beffd150de0d3d4312d995278b99e8d90a3092aef",
+    "caption.txt": "37b16b099aaa99084ea2cc2b790c1d55843ab67739fbbc1a3e606850d891338f"
+  },
+  "size_inches": [
+    7.0,
+    4.8
+  ],
+  "caption": "Spanwise-context Cp sections for sample_0054. Both surface branches use the same model style; all saved curve nodes are retained. Panel metrics combine both branches at the actual saved station. Fixed M0-baseline-ranked representative case, N=20, seed=3407; no selection by M2 benefit. Targets eta=0.025/0.10/0.50/0.90 use the nearest valid saved stations, identified in each panel; no interpolation. All original valid curve nodes and both surface branches remain, with no smoothing or clipping of pressure peaks. Case A retains its larger whole-wing M2-than-M1 RMSE. This single-wing result is not a population conclusion.\n",
+  "statistical_unit": "See unchanged figure caption",
+  "test_evaluated": false
+}

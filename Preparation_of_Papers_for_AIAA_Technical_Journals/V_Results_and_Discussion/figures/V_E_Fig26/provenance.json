@@ -1,0 +1,50 @@
+{
+  "source": "processed_data/FigVE2_source_data.csv",
+  "N": 20,
+  "methods": [
+    "D0",
+    "D1"
+  ],
+  "subsets": [
+    "A",
+    "B",
+    "C"
+  ],
+  "panels": [
+    {
+      "Target": "CL",
+      "points_D0": 88,
+      "points_D1": 88,
+      "limits": [
+        0.13194982148706913,
+        0.7506758030503988
+      ],
+      "equal_aspect": true,
+      "CD_axis_unit": "dimensionless"
+    },
+    {
+      "Target": "CD",
+      "points_D0": 88,
+      "points_D1": 88,
+      "limits": [
+        0.0037779507562273776,
+        0.0340897013106682
+      ],
+      "equal_aspect": true,
+      "CD_axis_unit": "raw coefficient"
+    },
+    {
+      "Target": "CMZ",
+      "points_D0": 88,
+      "points_D1": 88,
+      "limits": [
+        0.21344573944807052,
+        0.984623534977436
+      ],
+      "equal_aspect": true,
+      "CD_axis_unit": "dimensionless"
+    }
+  ],
+  "aggregation": "per-wing arithmetic prediction mean for visualization only",
+  "source_manifest": "source_data/source_manifest.json"
+}

@@ -1,0 +1,29 @@
+{
+  "figure": "Fig08_training_selection_stability",
+  "split": "validation",
+  "validation_wings": 41,
+  "N_values": [
+    20,
+    50
+  ],
+  "seeds": [
+    3407
+  ],
+  "reuse": "Exact image, source-data and caption copy; no re-render or recomputation",
+  "original_provenance": "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\11_PaperFigures\\chapter5_v1\\validation\\run_20261024_145024_430054\\figures\\Fig08_training_selection_stability\\provenance.json",
+  "original_provenance_sha256": "0ef90c365813ba26a340776411b8c9735f351089ff16569fe3c449aee14d2d67",
+  "copied_file_sha256": {
+    "Fig08_training_selection_stability.png": "ce035b1ed49a9e41fd3412850408074533ae4796329e2f9c72ca15b6740c826a",
+    "Fig08_training_selection_stability.pdf": "a2cc769fd21cb5de098c0f344e2e502b3c5f6822558978eab8588f05f0e86596",
+    "Fig08_training_selection_stability.svg": "f7a271a6927670e9d1074129e644634133b50e9ca9bfb5dcccbc4b31690cee49",
+    "source_data.csv": "e9cadfdd94d452139f0b6caa0ce5861a8b9e16370aa9ea39d57aaae64e20a186",
+    "caption.txt": "43c01ce0928156adc8baa6f551cb0d7d0803754a4514fe18e2f0e0b447872025"
+  },
+  "size_inches": [
+    7.0,
+    2.8
+  ],
+  "caption": "Pressure prediction sensitivity to five training-wing selections at fixed initialization seed 3407; matching repeat indices identify paired selections across methods.\n",
+  "statistical_unit": "Five selection repeats at fixed training seed",
+  "test_evaluated": false
+}

@@ -1,0 +1,169 @@
+\documentclass[journal]{new-aiaa}
+
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage{longtable,tabularx}
+\setlength\LTleft{0pt}
+\usepackage{placeins}
+
+
+\title{Hierarchical Aerodynamic Knowledge Transfer for Data-Efficient
+Surface Pressure Prediction of Transonic Swept Wings}
+
+
+% Replace the author, footnote, and affiliation placeholders before submission.
+\author{Author Name\footnote{Position, Department, mailing address, and AIAA
+Member Grade (if applicable); corresponding author: email address.}}
+\affil{Institution, City, Province or State, Postal Code, Country}
+
+
+\begin{document}
+
+\maketitle
+
+
+% Abstract intentionally left empty for later completion.
+% \begin{abstract}
+% \end{abstract}
+
+
+% Nomenclature will be completed later.
+% \input{00_Front_Matter/nomenclature}
+
+
+\input{Abstract}
+
+% ============================================================
+% I. Introduction
+% ============================================================
+
+\input{I_Introduction/I_Introduction}
+
+% ============================================================
+% II. Database Generation and Preprocessing
+% ============================================================
+
+\section{Database Generation and Preprocessing}
+\label{sec:database-generation}
+
+
+% ============================================================
+% A. Aerodynamic Database Design
+% ============================================================
+% Includes:
+%   1. Reference Geometry and Baseline Airfoils
+%   2. Hierarchical Database Architecture
+%   3. Design Space and Sampling Strategy
+\input{II_Database_and_Preprocessing/II_A_Data_Design}
+
+
+% ============================================================
+% B. CFD Setup and Convergence Assessment
+% ============================================================
+% Includes:
+%   1. Numerical Method and Grid Configuration
+%   2. Grid Sensitivity and Mesh Selection
+%   3. Iterative Convergence Assessment
+\input{II_Database_and_Preprocessing/II_B_CFD_Setup}
+
+
+% ============================================================
+% C. Surface Data Preprocessing
+% ============================================================
+\input{II_Database_and_Preprocessing/II_C_Surface_Preprocessing}
+
+
+% ============================================================
+% III. Hierarchical Aerodynamic Knowledge Transfer
+% ============================================================
+
+\section{Hierarchical Aerodynamic Knowledge Transfer}
+\label{sec:methodology}
+
+
+% A. Problem Formulation and Overall Framework
+\input{III_Knowledge_Transfer/III_A_Overall_Framework}
+
+
+% B. Hierarchical Aerodynamic Knowledge Learning
+\input{III_Knowledge_Transfer/III_B_Knowledge_Learning}
+
+
+% C. Cross-Dimensional Knowledge Transfer
+\input{III_Knowledge_Transfer/III_C_Knowledge_Projection}
+
+
+
+% D. Target-Domain Residual Pressure Prediction
+\input{III_Knowledge_Transfer/III_D_Residual_Prediction}
+
+
+
+
+
+
+% ===================================================
+% IV. Experimental Design
+% ===================================================
+
+\section{Experimental Design}
+\label{sec:experimental-design}
+
+% A. Target-Domain Data Partition
+\input{IV_Experimental_Design/IV_A_Data_Partition}
+
+% B. Comparative Models and Regional Knowledge Ablations
+\input{IV_Experimental_Design/IV_B_Models_and_Ablations}
+
+% C. Pressure-Conditioned Aerodynamic Coefficient Prediction
+\input{IV_Experimental_Design/IV_C_Force_Prediction}
+
+
+% D. Training-Subset Sensitivity and Regional Evaluation
+\input{IV_Experimental_Design/IV_D_Subset_Sensitivity}
+
+
+
+
+
+
+
+% ==================================================
+% V. Results and Discussion
+% ==================================================
+
+\section{Results and Discussion}
+\label{sec:results-and-discussion}
+
+% A. Data Efficiency
+\input{V_Results_and_Discussion/V_A_Data_Efficiency}
+
+% B. Regional Aerodynamic Knowledge
+\input{V_Results_and_Discussion/V_B_Regional_Knowledge}
+
+% C. Three-Dimensional Pressure Prediction
+\input{V_Results_and_Discussion/V_C_Spatial_Errors}
+
+
+% D. Training-Subset Selection Sensitivity
+\input{V_Results_and_Discussion/V_D_Selection_Sensitivity}
+
+% E. Aerodynamic Coefficient Prediction
+\input{V_Results_and_Discussion/V_E_Force_Performance}
+
+
+\FloatBarrier
+\input{VI_Conclusions/VI_Conclusions}
+
+
+\section*{Acknowledgments}
+
+
+\bibliography{references}
+
+
+\end{document}

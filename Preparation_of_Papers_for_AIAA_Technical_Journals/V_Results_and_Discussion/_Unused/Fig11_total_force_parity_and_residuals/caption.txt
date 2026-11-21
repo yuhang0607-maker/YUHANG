@@ -1,0 +1,1 @@
+Total force and pitching-moment predictions and signed residuals for all validation wings, using frozen pressure predictions and separately trained regression heads.

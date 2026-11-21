@@ -1,0 +1,1 @@
+Regional validation pressure errors for L1, L1 plus root, L1 plus tip, and complete knowledge configurations at twenty training wings; points denote individual seeds and error bars their sample SD.

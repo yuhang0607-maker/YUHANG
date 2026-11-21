@@ -1,0 +1,33 @@
+# ---- LaTeX intermediate build artifacts ----
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.blg
+*.bbl
+*.synctex.gz
+*.synctex
+*.nav
+*.snm
+*.vrb
+*.lof
+*.lot
+*.idx
+*.ind
+*.ilg
+
+# ---- Editor / OS junk ----
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.code-workspace
+.DS_Store
+Thumbs.db
+*~
+*.bak
+*.swp
+
+# ---- Compiled translated draft (kept local only) ----
+*中文全译*.pdf

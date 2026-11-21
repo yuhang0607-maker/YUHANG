@@ -1,0 +1,7 @@
+
+\subsection{Training-Subset Sensitivity and Regional Evaluation}
+\label{subsec:training-subset-sensitivity-protocol}
+
+To examine the influence of training-subset selection on pressure prediction, five alternative training subsets are considered at each of the two target-domain budgets, $N=20$ and $N=50$. Within each subset, M0, M1, and M2 use matched wing configurations, with the training random seed fixed at 3407 and all other settings following the baseline protocol. Each model is evaluated on the same 41 validation wings. The five subsets are not required to be mutually disjoint, and their results are used to assess the sensitivity of prediction performance to training-subset selection rather than treated as independent test-set realizations.
+
+To evaluate regional error changes across the wing, saved predictions from three training seeds (3407, 3408, and 3409) are analyzed at $N=10$, 20, 50, and 100. Regional pressure RMSE is calculated for each validation wing using consistent valid-node masks and region definitions. Paired error differences are computed as M1 minus M0 and M2 minus M1 for the same wing, training budget, and random seed, with negative values indicating error reductions after introducing the corresponding knowledge components. The regional results are summarized using the mean paired error changes and the fractions of validation wings exhibiting positive error changes, aggregated across the three training seeds.

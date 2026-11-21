@@ -1,0 +1,18 @@
+\begin{table}[hbt!]
+  \caption{Grid sensitivity of the representative swept-wing case}
+  \label{tab:grid-sensitivity}
+  \centering
+  \footnotesize
+  \setlength{\tabcolsep}{3.0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccccc@{}}
+    \hline\hline
+    & & & & & & \multicolumn{3}{c}{$|\Delta|$, \%} \\
+    \cline{7-9}
+    Grid & $N_c{\times}N_s{\times}N_n$ & Cells, $10^6$ & $C_L$ & $C_D$ & $C_{M_z}$ & $C_L$ & $C_D$ & $C_{M_z}$ \\
+    \hline
+    Coarse & $261{\times}81{\times}81$ & 1.828 & 0.390022 & 0.0116301 & 1.351364 & 0.263 & 0.213 & 0.269 \\
+    Medium & $313{\times}97{\times}97$ & 3.113 & 0.390872 & 0.0116498 & 1.354607 & 0.045 & 0.044 & 0.030 \\
+    Fine & $375{\times}117{\times}117$ & 5.378 & 0.391049 & 0.0116549 & 1.355009 & \textemdash & \textemdash & \textemdash \\
+    \hline\hline
+  \end{tabular*}
+\end{table}

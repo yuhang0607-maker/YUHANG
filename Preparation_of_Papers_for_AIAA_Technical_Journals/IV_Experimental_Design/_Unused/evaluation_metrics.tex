@@ -1,0 +1,7 @@
+
+\subsection{Evaluation Metrics and Statistical Reporting}
+\label{subsec:evaluation-metrics}
+
+Root mean square error (RMSE) and mean absolute error (MAE) are used to evaluate the prediction accuracy of surface-pressure distributions and aerodynamic coefficients. Surface-pressure errors are evaluated over valid wing-surface nodes, excluding the leading-edge starting nodes and the wing-tip cap region. To examine the spanwise distribution of prediction errors, the wing surface is divided into the wing-root region ($\eta \leq 0.20$), midspan region ($0.20 < \eta < 0.80$), and wing-tip region ($\eta \geq 0.80$). Additional analysis is conducted for the near-tip region.
+
+Results from repeated training runs are reported as the mean and standard deviation of the evaluation metrics. For the training-sample selection sensitivity experiments, variations in prediction errors across different training subsets are evaluated separately to assess model sensitivity to sample selection.

@@ -1,0 +1,28 @@
+{
+  "figure": "Fig11_total_force_parity_and_residuals",
+  "split": "validation",
+  "validation_wings": 41,
+  "N_values": [
+    20
+  ],
+  "seeds": [
+    3407
+  ],
+  "reuse": "Exact image, source-data and caption copy; no re-render or recomputation",
+  "original_provenance": "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\11_PaperFigures\\chapter5_v1\\validation\\run_20261024_145024_430054\\figures\\Fig11_total_force_parity_and_residuals\\provenance.json",
+  "original_provenance_sha256": "c98099a688742ed87c7e7bbec5b7c05bba1418421c9178b1ca097eeb2b21b820",
+  "copied_file_sha256": {
+    "Fig11_total_force_parity_and_residuals.png": "af37e58340f7da5b6c8af040e05ef15cfcba79944b097a8f903664c342716fb6",
+    "Fig11_total_force_parity_and_residuals.pdf": "4af4dfad8969ecb62cefc6366db33bc7c2a0c941983024800c6c177b4de8565b",
+    "Fig11_total_force_parity_and_residuals.svg": "872711279b6f985bdf986e2b5412a3f83b81f15c27859762f4f768654aaf7e77",
+    "source_data.csv": "421a61fd395e2cc0eebd5a3ae429127a245110d34f31e55b6aebe73a478797f1",
+    "caption.txt": "8be6be18755549d081a9b0c13925dd1a4e6a9012952c59cd42e648b846f1cccc"
+  },
+  "size_inches": [
+    7.0,
+    4.8
+  ],
+  "caption": "Total force and pitching-moment predictions and signed residuals for all validation wings, using frozen pressure predictions and separately trained regression heads.\n",
+  "statistical_unit": "See unchanged figure caption",
+  "test_evaluated": false
+}

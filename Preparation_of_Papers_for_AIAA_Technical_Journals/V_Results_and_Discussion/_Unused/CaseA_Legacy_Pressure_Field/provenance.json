@@ -1,0 +1,28 @@
+{
+  "figure": "Fig05_caseA_upper_representative_Cp_and_error_full_range",
+  "split": "validation",
+  "validation_wings": 41,
+  "N_values": [
+    20
+  ],
+  "seeds": [
+    3407
+  ],
+  "reuse": "Exact image, source-data and caption copy; no re-render or recomputation",
+  "original_provenance": "D:\\User\\mayuhang\\Cross dimensional transfer learning\\StudyOfSymmetricSweptWings\\06KnowledgeModel\\ResultV2\\ModelTrainingV2\\11_PaperFigures\\chapter5_round2\\validation\\run_20261026_102826_215214\\figures\\Fig05_caseA_upper_representative_Cp_and_error_full_range\\provenance.json",
+  "original_provenance_sha256": "e17071f9439a1af695c1e1a74be835ee6d2b7f81d7d73be1db12218e19cac1da",
+  "copied_file_sha256": {
+    "Fig05_caseA_upper_representative_Cp_and_error_full_range.png": "f2dc72c7f243f3fe539acbe3df9dc4ec8033edab93bf8f546970131d322059e2",
+    "Fig05_caseA_upper_representative_Cp_and_error_full_range.pdf": "cb472e0dfefac096dccae8b712022a70756b246cf00b8bcb6446e9c721d4c893",
+    "Fig05_caseA_upper_representative_Cp_and_error_full_range.svg": "c54d50d229cc54d68dd1e9be3b8392b3987c36d07ab4eb1ed6ab0c45f997343c",
+    "source_data.csv": "02215b6778ea1ba595872a9a2a73e73b64d3ac60ca762a5aa4ccdb9075f5d8f9",
+    "caption.txt": "0cc3a730f68b8c54ef2077e06a4363374836578b894315b80cf525c5b5add5cf"
+  },
+  "size_inches": [
+    7.0,
+    3.2
+  ],
+  "caption": "Case A, sample_0054, median error, ranked 21/41 by the fixed M0 whole-wing valid-surface RMSE at N=20, seed=3407. Ma=0.789005, alpha=1.9625 deg, quarter-chord sweep=25.8865 deg. Top: CFD/M0/M1/M2 upper Cp on the actual X-Z planform, a common Cp scale. Bottom: three signed errors using one symmetric scale; the last panel reports this wing's RMSE combining both surfaces. Selection does not use M2 improvement. Case A's worse M2-than-M1 whole-wing result is retained. Common Cp and symmetric signed-error limits cover the complete pooled valid-node extrema. This wide-range diagnostic preserves pressure peaks and error extrema without saturation. All original values and metrics remain, with distinct out-of-range colors, colorbar extensions and recorded overflow counts. Cp is filled only, without isolines; error cells retain the original values/mask. This single-wing illustration is not a 41-wing average.\n",
+  "statistical_unit": "See unchanged figure caption",
+  "test_evaluated": false
+}
